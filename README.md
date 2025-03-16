@@ -36,7 +36,7 @@ Klonen Sie das Git-Repository auf Ihren lokalen Computer:
 Wechseln Sie in der Kommandozentrale in das Projektverzeichnis.<br />
 Beispiel: 
 <br />
-`cd C:/Bachelorarbeit_NL_SN`
+`cd C:\Bachelorarbeit_NL_SN`
 
 ### Schritt 3: Virtuelle Umgebung
 
@@ -76,7 +76,7 @@ Legen Sie die sich im `apache` Ordner des Projekts befindende `config.ttl` und `
 Öffnen Sie eine neue Eingabeaufforderung / Kommandozentrale und navigieren Sie zu der Apache-Jena-Fuseki Version 5.0.0 <br />
 Beispiel: 
 <br /> 
-`cd C:/apache-jena-fuseki-5.0.0`
+`cd C:\apache-jena-fuseki-5.0.0`
 
 Starten Sie nun Fuseki mit dem Befehl: 
 <br /> 
@@ -105,7 +105,7 @@ Während der gesamten Nutzung des Programmes darf keine in "Anwendung Starten" g
 Öffnen Sie eine Eingabeaufforderung / Kommandozentrale und navigieren Sie zu der Apache-Jena-Fuseki Version 5.0.0 <br />
 Beispiel: 
 <br /> 
-`cd C:/apache-jena-fuseki-5.0.0`
+`cd C:\apache-jena-fuseki-5.0.0`
 
 Starten Sie nun Fuseki mit dem Befehl: 
 <br /> 
@@ -116,7 +116,7 @@ Starten Sie nun Fuseki mit dem Befehl:
 Öffnen Sie eine neue Eingabeaufforderung / Kommandozentrale und navigieren Sie zum Projekt `Bachelorarbeit_NL_SN`:<br /> 
 Beispiel: 
 <br /> 
-`cd C:/Bachelorarbeit_NL_SN`
+`cd C:\Bachelorarbeit_NL_SN`
 
 Aktivieren Sie die virtuelle Umgebung:
 
