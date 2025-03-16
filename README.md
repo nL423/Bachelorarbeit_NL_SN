@@ -65,11 +65,42 @@ Installieren Sie die erforderlichen Pakete über pip:
 <br />
 `pip install -r requirements.txt`
 
-### Schritt 5: Anwendung starten
+Sie können nun die Eingabeaufforderung / Kommandozentralen schliessen.
+
+### Schritt 5: Fuseki Datenbank anbinden
 
 #### Möglichkeit A: Unter der Verwendung von Apache-Jena-Fuseki-5.0.0
 
 Legen Sie die sich im `apache` Ordner des Projekts befindende `config.ttl` und `rules.ttl` in den `run` Ordner ihrer installierten Apache-Jena-Fuseki Version ab
+
+Öffnen Sie eine neue Eingabeaufforderung / Kommandozentrale und navigieren Sie zu der Apache-Jena-Fuseki Version 5.0.0 <br />
+Beispiel: 
+<br /> 
+`cd C:/apache-jena-fuseki-5.0.0`
+
+Starten Sie nun Fuseki mit dem Befehl: 
+<br /> 
+`fuseki-server`
+
+Öffnen Sie Fuseki unter `http://localhost:3030/#/` um die den zuvor beschaffenen Dump vom Corpus Nummorum hinzuzufügen: <br /> 
+Hierzu klicken Sie auf `add data` und laden den zuvor beschaffenen CN Dump hinein.
+
+Sie können nun die Eingabeaufforderung / Kommandozentrale schliessen.
+
+#### Möglichkeit B: Unter der Verwendung des Corpus Nummorum Endpunktes 
+
+Stellen Sie sicher, dass der Generic Rule Reasoner am Corpus Nummorum integriert wurde!
+
+Öffnen Sie `CoinSearchHandler.py`. Die Datei finden Sie unter `Bachelorarbeit_NL_SN/igc/services/`
+<br /> 
+Folgen Sie den Anweisungen in Zeile 27 und 28 der `CoinSearchHandler.py` Datei
+
+## Anwendung starten
+
+Wenn Sie sich bei der Installation in Schritt 5 für Möglichkeit B entschieden haben, dann überspringen Sie Schritt 1!!!! <br/>
+Während der gesamten Nutzung des Programmes darf keine in "Anwendung Starten" geöffnete Kommandozentrale / Eingabeaufforderung geschlossen werden !!!!
+
+### Schritt 1: Fuseki Endpunkt starten
 
 Öffnen Sie eine Eingabeaufforderung / Kommandozentrale und navigieren Sie zu der Apache-Jena-Fuseki Version 5.0.0 <br />
 Beispiel: 
@@ -80,38 +111,23 @@ Starten Sie nun Fuseki mit dem Befehl:
 <br /> 
 `fuseki-server`
 
-Bei der ersten Verwendung: <br /> 
-Öffnen Sie Fuseki unter `http://localhost:3030/#/` um die den zuvor beschaffenen Dump vom Corpus Nummorum hinzuzufügen: <br /> 
-Hierzu klicken Sie auf `add data` und laden den zuvor beschaffenen CN Dump hinein.
+### Schritt 2: Python Server starten
 
-
-Öffnen Sie eine zweite Eingabeaufforderung / Kommandozentrale und navigieren Sie zum Projekt `Bachelorarbeit_NL_SN`:<br /> 
+Öffnen Sie eine neue Eingabeaufforderung / Kommandozentrale und navigieren Sie zum Projekt `Bachelorarbeit_NL_SN`:<br /> 
 Beispiel: 
 <br /> 
 `cd C:/Beispielordner/Bachelorarbeit_NL_SN`
 
-Navigieren Sie in das Verzeichnis, das `manage.py` enthält:
-<br />
-`cd igc`
+Aktivieren Sie die virtuelle Umgebung:
 
-Führen Sie die folgenden Befehle aus, um den Server zu starten:
-<br />
-`python manage.py runserver`
+- **Windows:**
+  <br />
+  `.\venv\Scripts\activate`
 
-Nach dem Start des Servers ist die Anwendung unter `http://127.0.0.1:8000/` in Ihrem Webbrowser erreichbar.
 
-#### Möglichkeit B: Unter der Verwendung des Corpus Nummorum Endpunktes 
-
-Stellen Sie sicher, dass der Generic Rule Reasoner am Corpus Nummorum integriert wurde!
-
-Öffnen Sie `CoinSearchHandler.py`. Die Datei finden Sie unter `Bachelorarbeit_NL_SN/igc/services/`
-<br /> 
-Folgen Sie den Anweisungen in Zeile 27 und 28 
-
-Öffnen Sie eine Eingabeaufforderung / Kommandozentrale und navigieren Sie zum Projekt `Bachelorarbeit_NL_SN`: <br />
-Beispiel: 
-<br /> 
-`cd C:/Bachelorarbeit_NL_SN`
+- **Unix oder MacOS:**
+  <br />
+  `source venv/bin/activate`
 
 Navigieren Sie in das Verzeichnis, das `manage.py` enthält:
 <br />
