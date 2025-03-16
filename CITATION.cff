@@ -1,0 +1,34 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: Iconographic Search
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - given-names: Danilo
+    family-names: Pantic
+    email: panticdanilo@googlemail.com
+  - given-names: Mohammed
+    name-particle: Baker
+    family-names: Sayed Mahmod
+    email: mohammed.sm@hotmail.de
+repository-code: 'https://github.com/Danilopa/Bachelorthesis'
+abstract: >-
+  Iconographic Search is an advanced search engine
+  specifically designed to efficiently search iconographic
+  content. Users can search for specific features of coins
+  and types using detailed descriptions and specific
+  keywords. This platform is ideal for researchers,
+  historians and enthusiasts in the field of numismatics and
+  typology.
+keywords:
+  - iconography
+  - search engine
+  - numismatic
+license: CC-BY-NC-SA-3.0
+commit: 8556f5faf393700c8d8942da0c5da62f5d8b05f3
+version: '1.0'
+date-released: '2024-04-19'

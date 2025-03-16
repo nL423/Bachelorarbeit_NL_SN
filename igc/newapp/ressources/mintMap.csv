@@ -1,0 +1,1254 @@
+mint,mintLabel
+http://nomisma.org/id/amphipolis,Amphipolis
+http://nomisma.org/id/uranopolis,Uranopolis
+http://nomisma.org/id/aegae_macedonia,"Aegae, Macedon"
+http://nomisma.org/id/corinth,Corinth
+http://nomisma.org/id/pella_macedon,Pella
+http://nomisma.org/id/mesembria,Mesembria
+http://nomisma.org/id/odessus,Odessus
+http://nomisma.org/id/heracleia_pontica,Heracleia Pontica
+http://nomisma.org/id/lampsacus,Lampsacus
+http://nomisma.org/id/parium,Parium
+http://nomisma.org/id/abydus,Abydus
+http://nomisma.org/id/alexandreia_troas,Alexandreia Troas
+http://nomisma.org/id/temnus,Temnus
+http://nomisma.org/id/mytilene,Mytilene
+http://nomisma.org/id/ephesus,Ephesus
+http://nomisma.org/id/erythrae,Erythrae
+http://nomisma.org/id/magnesia_ad_maeandrum,Magnesia ad Maeandrum
+http://nomisma.org/id/miletus,Miletus
+http://nomisma.org/id/mylasa,Mylasa
+http://nomisma.org/id/phocaea,Phocaea
+http://nomisma.org/id/priene,Priene
+http://nomisma.org/id/smyrna,Smyrna
+http://nomisma.org/id/chios,Chios
+http://nomisma.org/id/samos,Samos
+http://nomisma.org/id/alabanda,Alabanda
+http://nomisma.org/id/rhodes,Rhodes
+http://nomisma.org/id/sardes,Sardis
+http://nomisma.org/id/uncertain_value,Uncertain value
+http://nomisma.org/id/phaselis,Phaselis
+http://nomisma.org/id/aspendus,Aspendus
+http://nomisma.org/id/perge,Perge
+http://nomisma.org/id/termessus_major,Termessus
+http://nomisma.org/id/tarsus,Tarsus
+http://nomisma.org/id/citium,Citium
+http://nomisma.org/id/paphus,Paphos
+http://nomisma.org/id/salamis_cyprus,Salamis
+http://nomisma.org/id/damascus,Damascus
+http://nomisma.org/id/myriandrus,Myriandrus
+http://nomisma.org/id/ace_ptolemais,Ptolemais-Ake
+http://nomisma.org/id/aradus,Aradus
+http://nomisma.org/id/byblus,Byblus
+http://nomisma.org/id/sidon,Sidon
+http://nomisma.org/id/tyre,Tyre
+http://nomisma.org/id/babylon,Babylon
+http://nomisma.org/id/susa,Susa
+http://nomisma.org/id/ecbatana,Ecbatana
+http://nomisma.org/id/alexandreia_egypt,Alexandria
+http://nomisma.org/id/memphis,Memphis
+http://nomisma.org/id/cyrene,Cyrene
+http://nomisma.org/id/argos_argolis,Argos
+http://nomisma.org/id/nisyros,Nisyros
+http://nomisma.org/id/side,Side
+http://nomisma.org/id/curium,Curium
+http://nomisma.org/id/carrhae,Carrhae
+http://nomisma.org/id/sillyum,Sillyum
+http://nomisma.org/id/seleuceia_ad_tigrim,Seleuceia ad Tigrim
+http://nomisma.org/id/pergamum,Pergamum
+http://nomisma.org/id/clazomenae,Clazomenae
+http://nomisma.org/id/istrus,Istrus
+http://nomisma.org/id/sestus,Sestos
+http://nomisma.org/id/lysimachia,Lysimachia
+http://nomisma.org/id/callatis,Callatis
+http://nomisma.org/id/cyzicus,Cyzicus
+http://nomisma.org/id/cabyle,Cabyle
+http://nomisma.org/id/carne,Carne
+http://nomisma.org/id/sicyon,Sicyon
+http://nomisma.org/id/megalopolis,Megalopolis
+http://nomisma.org/id/assus,Assus
+http://nomisma.org/id/myrina_aeolis,Myrina
+http://nomisma.org/id/cyme_aeolis,Cyme
+http://nomisma.org/id/methymna,Methymna
+http://nomisma.org/id/colophon,Colophon
+http://nomisma.org/id/cos,Cos
+http://nomisma.org/id/gabala,Gabala
+http://nomisma.org/id/sinope,Sinope
+http://nomisma.org/id/rome,Rome
+http://nomisma.org/id/narbo,Narbo
+http://nomisma.org/id/metapontum,Metapontum
+http://nomisma.org/id/apollonia_mordiaeum,Apollonia Mordiaeum
+http://nomisma.org/id/italy_southeast_rrc,Italy (Southeast)
+http://nomisma.org/id/neapolis_campania,Neapolis
+http://nomisma.org/id/italy_south_rrc,Italy (South)
+http://nomisma.org/id/messana,Messana
+http://nomisma.org/id/eastern_mint_rrc,Eastern Roman Mint
+http://nomisma.org/id/lugdunum,Lugdunum
+http://nomisma.org/id/salpesa,Salpesa
+http://nomisma.org/id/laodiceia_ad_lycum,Laodiceia ad Lycum
+http://nomisma.org/id/osca,Osca
+http://nomisma.org/id/italy_north_rrc,Italy (North)
+http://nomisma.org/id/emerita,Emerita
+http://nomisma.org/id/caesaraugusta,Caesaraugusta
+http://nomisma.org/id/antiocheia_syria,"Antioch, Syria"
+http://nomisma.org/id/colonia_patricia,Colonia Patricia
+http://nomisma.org/id/mogontiacum,Mainz
+http://nomisma.org/id/mediolanum,Mediolanum
+http://nomisma.org/id/siscia,Siscia
+http://nomisma.org/id/serdica,Serdica
+http://nomisma.org/id/ticinum,Ticinum
+http://nomisma.org/id/emisa,Emisa
+http://nomisma.org/id/nemausus,Nemausus
+http://nomisma.org/id/viminacium,Viminacium
+http://nomisma.org/id/carnuntum,Carnuntum
+http://nomisma.org/id/colonia_claudia_ara_agrippinensium,Cologne
+http://nomisma.org/id/southern_gallic_mint,Southern Gallic Mint
+http://nomisma.org/id/tarraco,Tarraco
+http://nomisma.org/id/vindobona,Vindobona
+http://nomisma.org/id/antiocheia_pisidia,Antioch of Pisidia
+http://nomisma.org/id/carthage,Carthage
+http://nomisma.org/id/treveri,Trier
+http://nomisma.org/id/londinium,Londinium
+http://nomisma.org/id/thessalonica,Thessalonica
+http://nomisma.org/id/constantinople,Constantinople
+http://nomisma.org/id/aquileia,Aquileia
+http://nomisma.org/id/sirmium,Sirmium
+http://nomisma.org/id/nicomedia,Nicomedia
+http://nomisma.org/id/heraclea_thracica,Heraclea
+http://nomisma.org/id/ostia,Ostia
+http://nomisma.org/id/arelate,Arelate
+http://nomisma.org/id/camulodunum,Camulodunum
+http://nomisma.org/id/ambianum,Ambianum
+http://nomisma.org/id/rotomagus,Rotomagus
+http://nomisma.org/id/luceria,Luceria
+http://nomisma.org/id/italy_central_rrc,Italy (Central)
+http://nomisma.org/id/sicily1_rrc,Sicily 1
+http://nomisma.org/id/sicily2_rrc,Sicily 2
+http://nomisma.org/id/canusium,Canusium
+http://nomisma.org/id/corcyra,Corcyra
+http://nomisma.org/id/massalia,Massalia
+http://nomisma.org/id/laodiceia_ad_mare,Laodicea ad Mare
+http://nomisma.org/id/berytus,Berytus
+http://nomisma.org/id/marium,Marium
+http://nomisma.org/id/amathus,Amathus
+http://nomisma.org/id/cnidus,Cnidus
+http://nomisma.org/id/teos,Teos
+http://nomisma.org/id/carystus,Carystus
+http://nomisma.org/id/samothrace,Samothrace
+http://nomisma.org/id/euromus,Euromus
+http://nomisma.org/id/antiocheia_ad_maeandrum,Antiocheia ad Maeandrum
+http://nomisma.org/id/messene,Messene
+http://nomisma.org/id/magydus,Magydus
+http://nomisma.org/id/lapethus,Lapethus
+http://nomisma.org/id/sagalassus,Sagalassus
+http://nomisma.org/id/chalcis,Chalcis
+http://nomisma.org/id/tripolis_phoenicia,Tripolis
+http://nomisma.org/id/ravenna,Ravenna
+http://nomisma.org/id/comitatensian_mint,Comitatensian
+http://nomisma.org/id/ravenna_com,Ravenna comitatensian mint
+http://nomisma.org/id/barcino,Barcino
+http://nomisma.org/id/marathus,Marathus
+http://nomisma.org/id/tomis,Tomis
+http://nomisma.org/id/arelate_com,Arelate comitatensian mint
+http://nomisma.org/id/caesareia_cappadocia,Caesarea in Cappadocia
+http://nomisma.org/id/halicarnassus,Halicarnassus
+http://nomisma.org/id/ambracia,Ambracia
+http://nomisma.org/id/tyras,Tyras
+http://nomisma.org/id/tenedos,Tenedos
+http://nomisma.org/id/hierapolis_bambyce,Hierapolis Bambyce
+http://nomisma.org/id/simyra,Simyra
+http://nomisma.org/id/dyrrhachium,Dyrrhachium
+http://nomisma.org/id/hermione,Hermione
+http://nomisma.org/id/pellene,Pellene
+http://nomisma.org/id/pincum,Pincum
+http://nomisma.org/id/eastern_mint_ric,Eastern Mint
+http://nomisma.org/id/nicaea_gallia,Nicaea (Gallia)
+http://nomisma.org/id/uncertain_37_sco,Uncertain Mint 37
+http://nomisma.org/id/soli-pompeiopolis,Soli (Pompeiopolis)
+http://nomisma.org/id/seleuceia_ad_calycadnum,Seleuceia ad Calycadnum
+http://nomisma.org/id/uncertain_58_sco,Uncertain Mint 58
+http://nomisma.org/id/uncertain_57_sco,Uncertain Mint 57
+http://nomisma.org/id/uncertain_49_sco,Uncertain Mint 49
+http://nomisma.org/id/babylon_i_sco,Babylon I
+http://nomisma.org/id/sardes_sco,Sardis?
+http://nomisma.org/id/uncertain_56_sco,Uncertain Mint 56
+http://nomisma.org/id/uncertain_55_sco,Uncertain Mint 55
+http://nomisma.org/id/uncertain_54_sco,Uncertain Mint 54
+http://nomisma.org/id/uncertain_53_sco,Uncertain Mint 53
+http://nomisma.org/id/uncertain_52_sco,Uncertain Mint 52
+http://nomisma.org/id/nisibis,Nisibis
+http://nomisma.org/id/uncertain_42_sco,Uncertain Mint 42
+http://nomisma.org/id/uncertain_51_sco,Uncertain Mint 51
+http://nomisma.org/id/uncertain_50_sco,Uncertain Mint 50
+http://nomisma.org/id/uncertain_48_sco,Uncertain Mint 48
+http://nomisma.org/id/tralles,Tralles
+http://nomisma.org/id/EPO_sco,EΠO Mint
+http://nomisma.org/id/uncertain_35_sco,Uncertain Mint 35
+http://nomisma.org/id/uncertain_47_sco,Uncertain Mint 47
+http://nomisma.org/id/aegae_aeolis,"Aegae, Aeolis"
+http://nomisma.org/id/elaea,Elaea
+http://nomisma.org/id/scepsis,Scepsis
+http://nomisma.org/id/ilium,Ilium
+http://nomisma.org/id/uncertain_46_sco,Uncertain Mint 46
+http://nomisma.org/id/artacoana,Artacoana
+http://nomisma.org/id/uncertain_45_sco,Uncertain Mint 45
+http://nomisma.org/id/uncertain_44_sco,Uncertain Mint 44
+http://nomisma.org/id/uncertain_43_sco,Uncertain Mint 43
+http://nomisma.org/id/uncertain_41_sco,Uncertain Mint 41
+http://nomisma.org/id/uncertain_40_sco,Uncertain Mint 40
+http://nomisma.org/id/uncertain_39_sco,Uncertain Mint 39
+http://nomisma.org/id/uncertain_38_sco,Uncertain Mint 38
+http://nomisma.org/id/DEL_sco,ΔEΛ Mint
+http://nomisma.org/id/uncertain_6A_sco,Uncertain Mint 6A
+http://nomisma.org/id/uncertain_36_sco,Uncertain Mint 36
+http://nomisma.org/id/magnesia_ad_sipylum,Magnesia ad Sipylum
+http://nomisma.org/id/uncertain_34_sco,Uncertain Mint 34
+http://nomisma.org/id/holt_mint_b_sco,Second Diodotid Mint
+http://nomisma.org/id/holt_mint_a_sco,First Diodotid Mint
+http://nomisma.org/id/bactra,Bactra
+http://nomisma.org/id/ai_khanoum,Ai Khanoum
+http://nomisma.org/id/uncertain_33_sco,Uncertain Mint 33
+http://nomisma.org/id/uncertain_32_sco,Uncertain Mint 32
+http://nomisma.org/id/uncertain_31_sco,Uncertain Mint 31
+http://nomisma.org/id/uncertain_30_sco,Uncertain Mint 30
+http://nomisma.org/id/uncertain_29_sco,Uncertain Mint 29
+http://nomisma.org/id/uncertain_28_sco,Uncertain Mint 28
+http://nomisma.org/id/alinda,Alinda
+http://nomisma.org/id/bargylia,Bargylia
+http://nomisma.org/id/uncertain_6_sco,Uncertain Mint 6
+http://nomisma.org/id/uncertain_5_sco,Uncertain Mint 5
+http://nomisma.org/id/uncertain_4_sco,Uncertain Mint 4
+http://nomisma.org/id/uncertain_3_sco,Uncertain Mint 3
+http://nomisma.org/id/sigeum,Sigeum
+http://nomisma.org/id/uncertain_2_sco,Uncertain Mint 2
+http://nomisma.org/id/uncertain_26_sco,Uncertain Mint 26
+http://nomisma.org/id/uncertain_1_sco,Uncertain Mint 1
+http://nomisma.org/id/uncertain_25_sco,Uncertain Mint 25
+http://nomisma.org/id/antiocheia_margiana,Antiocheia of Margiana
+http://nomisma.org/id/uncertain_22_sco,Uncertain Mint 22
+http://nomisma.org/id/uncertain_24_sco,Uncertain Mint 24
+http://nomisma.org/id/uncertain_23_sco,Uncertain Mint 23
+http://nomisma.org/id/dura-europus,Dura-Europus
+http://nomisma.org/id/uncertain_21_sco,Uncertain Mint 21
+http://nomisma.org/id/seleuceia_pieria,Seleuceia Pieria
+http://nomisma.org/id/babylon_ii_sco,Babylon II
+http://nomisma.org/id/apameia_syria,Apameia in Syria
+http://nomisma.org/id/uncertain_17_sco,Uncertain Mint 17
+http://nomisma.org/id/uncertain_14_sco,Uncertain Mint 14
+http://nomisma.org/id/uncertain_11_sco,Uncertain Mint 11
+http://nomisma.org/id/uncertain_19_sco,Uncertain Mint 19
+http://nomisma.org/id/uncertain_20_sco,Uncertain Mint 20
+http://nomisma.org/id/uncertain_18_sco,Uncertain Mint 18
+http://nomisma.org/id/nisa,Nisa Mithradatkart
+http://nomisma.org/id/uncertain_16_sco,Uncertain Mint 16
+http://nomisma.org/id/uncertain_15_sco,Uncertain Mint 15
+http://nomisma.org/id/uncertain_13_sco,Uncertain Mint 13
+http://nomisma.org/id/uncertain_12_sco,Uncertain Mint 12
+http://nomisma.org/id/uncertain_10_sco,Uncertain Mint 10
+http://nomisma.org/id/persis,Persis
+http://nomisma.org/id/uncertain_9_sco,Uncertain Mint 9
+http://nomisma.org/id/seleuceia_ad_tigrim_ii_sco,Seleucia on the Tigris II
+http://nomisma.org/id/seleuceia_ad_tigrim_i_sco,Seleucia on the Tigris I
+http://nomisma.org/id/uncertain_75_sco,Uncertain Mint 75
+http://nomisma.org/id/uncertain_73_sco,Uncertain Mint 73
+http://nomisma.org/id/uncertain_72_sco,Uncertain Mint 72
+http://nomisma.org/id/uncertain_71_sco,Uncertain Mint 71
+http://nomisma.org/id/icarus,Icarus
+http://nomisma.org/id/gerrha,Gerrha
+http://nomisma.org/id/uncertain_69_sco,Uncertain Mint 69
+http://nomisma.org/id/uncertain_68_sco,Uncertain Mint 68
+http://nomisma.org/id/uncertain_8_sco,Uncertain Mint 8
+http://nomisma.org/id/rose_mint_sco,Rose Mint (Seleucid)
+http://nomisma.org/id/uncertain_67_sco,Uncertain Mint 67
+http://nomisma.org/id/PA_sco,ΠA Mint
+http://nomisma.org/id/DI_sco,ΔI Mint
+http://nomisma.org/id/uncertain_66_sco,Uncertain Mint 66
+http://nomisma.org/id/uncertain_65_sco,Uncertain Mint 65
+http://nomisma.org/id/uncertain_64_sco,Uncertain Mint 64
+http://nomisma.org/id/uncertain_63_sco,Uncertain Mint 63
+http://nomisma.org/id/uncertain_62_sco,Uncertain Mint 62
+http://nomisma.org/id/uncertain_61_sco,Uncertain Mint 61
+http://nomisma.org/id/uncertain_60_sco,Uncertain Mint 60
+http://nomisma.org/id/uncertain_7_sco,Uncertain Mint 7
+http://nomisma.org/id/uncertain_59_sco,Uncertain Mint 59
+http://nomisma.org/id/XAR_sco,ΞAP Mint
+http://nomisma.org/id/tarsus_i_sco,"Tarsus, Civic Workshop"
+http://nomisma.org/id/DI_wreath_sco,Wreath Mint (Seleucid)
+http://nomisma.org/id/uncertain_129_sco,Uncertain Mint 129
+http://nomisma.org/id/uncertain_128_sco,Uncertain Mint 128
+http://nomisma.org/id/uncertain_127_sco,Uncertain Mint 127
+http://nomisma.org/id/uncertain_125_sco,Uncertain Mint 125
+http://nomisma.org/id/elaeusa,Elaeusa
+http://nomisma.org/id/uncertain_124_sco,Uncertain Mint 124
+http://nomisma.org/id/ascalon,Ascalon
+http://nomisma.org/id/samaria,Samaria
+http://nomisma.org/id/uncertain_123_sco,Uncertain Mint 123
+http://nomisma.org/id/eros-nike_sco,Eros/Nike Mint
+http://nomisma.org/id/uncertain_122_sco,Uncertain Mint 122
+http://nomisma.org/id/uncertain_121_sco,Uncertain Mint 121
+http://nomisma.org/id/uncertain_120_sco,Uncertain Mint 120
+http://nomisma.org/id/uncertain_116_sco,Uncertain Mint 116
+http://nomisma.org/id/uncertain_112_sco,Uncertain Mint 112
+http://nomisma.org/id/mopsus,Mopsus
+http://nomisma.org/id/mallus,Mallus
+http://nomisma.org/id/ER_sco,ΕΡ Mint
+http://nomisma.org/id/uncertain_119_sco,Uncertain Mint 119
+http://nomisma.org/id/uncertain_117_sco,Uncertain Mint 117
+http://nomisma.org/id/tarsus_ii_sco,"Tarsus, Royal Workshop"
+http://nomisma.org/id/uncertain_115_sco,Uncertain Mint 115
+http://nomisma.org/id/uncertain_114_sco,Uncertain Mint 114
+http://nomisma.org/id/uncertain_111_sco,Uncertain Mint 111
+http://nomisma.org/id/uncertain_113_sco,Uncertain Mint 113
+http://nomisma.org/id/marisa,Marisa
+http://nomisma.org/id/jerusalem,Jerusalem
+http://nomisma.org/id/uncertain_108_sco,Uncertain Mint 108
+http://nomisma.org/id/uncertain_107_sco,Uncertain Mint 107
+http://nomisma.org/id/uncertain_106_sco,Uncertain Mint 106
+http://nomisma.org/id/uncertain_105_sco,Uncertain Mint 105
+http://nomisma.org/id/uncertain_104_sco,Uncertain Mint 104
+http://nomisma.org/id/uncertain_103_sco,Uncertain Mint 103
+http://nomisma.org/id/uncertain_102_sco,Uncertain Mint 102
+http://nomisma.org/id/uncertain_101_sco,Uncertain Mint 101
+http://nomisma.org/id/uncertain_100_sco,Uncertain Mint 100
+http://nomisma.org/id/uncertain_99_sco,Uncertain Mint 99
+http://nomisma.org/id/chalcis_ad_belum,Chalcis ad Belum
+http://nomisma.org/id/antioch_persian_gulf_sco,Antioch on the Persian Gulf
+http://nomisma.org/id/gaza,Gaza
+http://nomisma.org/id/uncertain_97_sco,Uncertain Mint 97
+http://nomisma.org/id/uncertain_96_sco,Uncertain Mint 96
+http://nomisma.org/id/pentalpha_sco,Pentalpha Mint
+http://nomisma.org/id/DH_sco,ΔΗ Mint
+http://nomisma.org/id/uncertain_95_sco,Uncertain Mint 95
+http://nomisma.org/id/uncertain_94_sco,Uncertain Mint 94
+http://nomisma.org/id/SZ_sco,ΣZ Mint
+http://nomisma.org/id/uncertain_93_sco,Uncertain Mint 93
+http://nomisma.org/id/uncertain_92_sco,Uncertain Mint 92
+http://nomisma.org/id/orcha,Orcha
+http://nomisma.org/id/uncertain_91_sco,Uncertain Mint 91
+http://nomisma.org/id/orthosia_phoenicia,Orthosia
+http://nomisma.org/id/uncertain_90_sco,Uncertain Mint 90
+http://nomisma.org/id/uncertain_89_sco,Uncertain Mint 89
+http://nomisma.org/id/uncertain_88_sco,Uncertain Mint 88
+http://nomisma.org/id/uncertain_87_sco,Uncertain Mint 87
+http://nomisma.org/id/cyrrhus,Cyrrhus
+http://nomisma.org/id/uncertain_86_sco,Uncertain Mint 86
+http://nomisma.org/id/uncertain_85_sco,Uncertain Mint 85
+http://nomisma.org/id/uncertain_81_sco,Uncertain Mint 81
+http://nomisma.org/id/antiocheia_persis,Antioch in Persis
+http://nomisma.org/id/uncertain_84_sco,Uncertain Mint 84
+http://nomisma.org/id/uncertain_83_sco,Uncertain Mint 83
+http://nomisma.org/id/uncertain_82_sco,Uncertain Mint 82
+http://nomisma.org/id/uncertain_80_sco,Uncertain Mint 80
+http://nomisma.org/id/antiochia_ad_callirhoem,Antiocheia ad Callirhoem
+http://nomisma.org/id/samaria_samaria,Samaria
+http://nomisma.org/id/uncertain_79_sco,Uncertain Mint 79
+http://nomisma.org/id/alexandretta,Alexandretta
+http://nomisma.org/id/hieropolis_castabala,Hieropolis Castabala
+http://nomisma.org/id/aegeae_cilicia,Aegeae
+http://nomisma.org/id/antiocheia_ad_sarum,Antiocheia ad Sarum
+http://nomisma.org/id/uncertain_78_sco,Uncertain Mint 78
+http://nomisma.org/id/ICID_sco,ICIΔ MInt
+http://nomisma.org/id/euhesperides,Euhesperides
+http://nomisma.org/id/uncertain_10_pco,Uncertain Mint 10
+http://nomisma.org/id/uncertain_3_pco,Uncertain Mint 3
+http://nomisma.org/id/ephesus_i_pco,Ephesus I
+http://nomisma.org/id/uncertain_42_pco,Uncertain Mint 42
+http://nomisma.org/id/uncertain_9_pco,Uncertain Mint 9
+http://nomisma.org/id/uncertain_36_pco,Uncertain Mint 36
+http://nomisma.org/id/joppa,Joppa
+http://nomisma.org/id/uncertain_33_pco,Uncertain Mint 33
+http://nomisma.org/id/uncertain_1_pco,Uncertain Mint 1
+http://nomisma.org/id/uncertain_35_pco,Uncertain Mint 35
+http://nomisma.org/id/uncertain_38_pco,Uncertain Mint 38
+http://nomisma.org/id/uncertain_2_pco,Uncertain Mint 2
+http://nomisma.org/id/uncertain_7_pco,Uncertain Mint 7
+http://nomisma.org/id/uncertain_21_pco,Uncertain Mint 21
+http://nomisma.org/id/uncertain_22_pco,Uncertain Mint 22
+http://nomisma.org/id/uncertain_19_pco,Uncertain Mint 19
+http://nomisma.org/id/uncertain_20_pco,Uncertain Mint 20
+http://nomisma.org/id/uncertain_16_pco,Uncertain Mint 16
+http://nomisma.org/id/uncertain_23_pco,Uncertain Mint 23
+http://nomisma.org/id/uncertain_28_pco,Uncertain Mint 28
+http://nomisma.org/id/uncertain_29_pco,Uncertain Mint 29
+http://nomisma.org/id/aenus,Aenus
+http://nomisma.org/id/uncertain_32_pco,Uncertain Mint 32
+http://nomisma.org/id/uncertain_4_pco,Uncertain Mint 4
+http://nomisma.org/id/uncertain_5_pco,Uncertain Mint 5
+http://nomisma.org/id/uncertain_8_pco,Uncertain Mint 8
+http://nomisma.org/id/soli_cyprus,Soli
+http://nomisma.org/id/uncertain_11_pco,Uncertain Mint 11
+http://nomisma.org/id/uncertain_12_pco,Uncertain Mint 12
+http://nomisma.org/id/uncertain_13_pco,Uncertain Mint 13
+http://nomisma.org/id/uncertain_15_pco,Uncertain Mint 15
+http://nomisma.org/id/uncertain_17_pco,Uncertain Mint 17
+http://nomisma.org/id/uncertain_18_pco,Uncertain Mint 18
+http://nomisma.org/id/uncertain_24_pco,Uncertain Mint 24
+http://nomisma.org/id/uncertain_27_pco,Uncertain Mint 27
+http://nomisma.org/id/ephesus_ii_pco,Ephesus II
+http://nomisma.org/id/uncertain_30_pco,Uncertain Mint 30
+http://nomisma.org/id/caunus,Caunus
+http://nomisma.org/id/uncertain_31_pco,Uncertain Mint 31
+http://nomisma.org/id/uncertain_34_pco,Uncertain Mint 34
+http://nomisma.org/id/uncertain_37_pco,Uncertain Mint 37
+http://nomisma.org/id/uncertain_39_pco,Uncertain Mint 39
+http://nomisma.org/id/uncertain_40_pco,Uncertain Mint 40
+http://nomisma.org/id/abdera_thrace,"Abdera, Thrace"
+http://nomisma.org/id/lebedus,Lebedus
+http://nomisma.org/id/naucratis,Naucratis
+http://nomisma.org/id/telmessus,Telmessus
+http://nomisma.org/id/uncertain_26_pco,Uncertain Mint 26
+http://nomisma.org/id/sicily,Sicily
+http://nomisma.org/id/byzantium,Byzantium
+http://nomisma.org/id/uncertain_25_pco,Uncertain Mint 25
+http://nomisma.org/id/arsinoe_uncertain_pco,Arsinoe
+http://nomisma.org/id/rhithymna,Rhithymna
+http://nomisma.org/id/arsinoe_argolis,Arsinoe (Methana)
+http://nomisma.org/id/larisa,"Larisa, Ionia"
+http://nomisma.org/id/melos,Melos
+http://nomisma.org/id/maroneia,Maroneia
+http://nomisma.org/id/uncertain_14_pco,Uncertain Mint 14
+http://nomisma.org/id/uncertain_6_pco,Uncertain Mint 6
+http://nomisma.org/id/thebes,Thebes
+http://nomisma.org/id/demetrias_thessaly,Demetrias
+http://nomisma.org/id/eastern_mint_demetrius_poliorcetes,Uncertain Eastern Mint
+http://nomisma.org/id/geneva,Geneva
+http://nomisma.org/id/bern,Bern
+http://nomisma.org/id/glarus,Glarus
+http://nomisma.org/id/lucerne,Lucerne
+http://nomisma.org/id/sion,Sion
+http://nomisma.org/id/fribourg,Fribourg
+http://nomisma.org/id/zurich,Zürich
+http://nomisma.org/id/solothurn,Solothurn
+http://nomisma.org/id/schaffhausen,Schaffhausen
+http://nomisma.org/id/basel,Basel
+http://nomisma.org/id/lausanne,Lausanne
+http://nomisma.org/id/saint_maurice,Saint-Maurice
+http://nomisma.org/id/sarnen,Sarnen
+http://nomisma.org/id/neuchatel,Neuchâtel
+http://nomisma.org/id/reichenau,Reichenau
+http://nomisma.org/id/chur,Chur
+http://nomisma.org/id/appenzell,Appenzell
+http://nomisma.org/id/porrentruy,Porrentruy
+http://nomisma.org/id/zug,Zug
+http://nomisma.org/id/nyon,Nyon
+http://nomisma.org/id/cornavin,Cornavin
+http://nomisma.org/id/laufenburg_aargau,Laufenburg
+http://nomisma.org/id/aarau,Aarau
+http://nomisma.org/id/schwyz,Schwyz
+http://nomisma.org/id/st_gallen,St. Gallen
+http://nomisma.org/id/haldenstein,Haldenstein
+http://nomisma.org/id/roveredo,Roveredo
+http://nomisma.org/id/bonaduz,Bonaduz
+http://nomisma.org/id/avenches,Avenches
+http://nomisma.org/id/altdorf,Altdorf
+http://nomisma.org/id/bellinzona,Bellinzona
+http://nomisma.org/id/cham,Cham
+http://nomisma.org/id/stuttgart,Stuttgart
+http://nomisma.org/id/baar,Baar
+http://nomisma.org/id/zofingen,Zofingen
+http://nomisma.org/id/paris,Paris
+http://nomisma.org/id/lyon,Lyon
+http://nomisma.org/id/diessenhofen,Diessenhofen
+http://nomisma.org/id/rheinau,Rheinau
+http://nomisma.org/id/windisch,Windisch
+http://nomisma.org/id/neu-toggenburg,Neu-Toggenburg
+http://nomisma.org/id/delemont,Delémont
+http://nomisma.org/id/alt-toggenburg,Alt-Toggenburg
+http://nomisma.org/id/st_ursanne,Saint-Ursanne
+http://nomisma.org/id/orbe,Orbe
+http://nomisma.org/id/strasbourg,Strasbourg
+http://nomisma.org/id/london,London
+http://nomisma.org/id/wangen_an_der_aare,Wangen an der Aare
+http://nomisma.org/id/burgdorf,Burgdorf
+http://nomisma.org/id/stein_am_rhein,Stein am Rhein
+http://nomisma.org/id/einsiedeln,Einsiedeln
+http://nomisma.org/id/brussels,Brussels
+http://nomisma.org/id/vienna,Vienna
+http://nomisma.org/id/freiburg_breisgau,Freiburg im Breisgau
+http://nomisma.org/id/celenderis,Celenderis
+http://nomisma.org/id/petelia,Petelia
+http://nomisma.org/id/melita,Melita
+http://nomisma.org/id/clannudda,Clannudda
+http://nomisma.org/id/abacaenum,Abacaenum
+http://nomisma.org/id/terina,Terina
+http://nomisma.org/id/vibo_valentia,Vibo Valentia
+http://nomisma.org/id/caulonia,Caulonia
+http://nomisma.org/id/croton,Croton
+http://nomisma.org/id/hipponium,Hipponium
+http://nomisma.org/id/locri_epizephyrii,Locri Epizephyrii
+http://nomisma.org/id/apameia_myrlea,Apameia (Myrleia)
+http://nomisma.org/id/morgantina,Morgantina
+http://nomisma.org/id/thurium,Thurium
+http://nomisma.org/id/xanthus,Xanthus
+http://nomisma.org/id/luca,Luca
+http://nomisma.org/id/poseidonia,Poseidonia
+http://nomisma.org/id/amastris,Amastris
+http://nomisma.org/id/stratus,Stratus
+http://nomisma.org/id/tyndaris,Tyndaris
+http://nomisma.org/id/catana,Catana
+http://nomisma.org/id/gomphi,Gomphi
+http://nomisma.org/id/syracuse,Syracuse
+http://nomisma.org/id/himera,Himera
+http://nomisma.org/id/barce,Barce
+http://nomisma.org/id/cranii,Cranii
+http://nomisma.org/id/tauromenium,Tauromenium
+http://nomisma.org/id/petra_sicily,Petra
+http://nomisma.org/id/thermae_himerenses,Thermae Himerenses
+http://nomisma.org/id/elis_elis,Elis
+http://nomisma.org/id/heraclea_lucaniae,Heraclea Lucaniae
+http://nomisma.org/id/rhegium,Rhegium
+http://nomisma.org/id/lissus,Lissus
+http://nomisma.org/id/samsosata,Samosata
+http://nomisma.org/id/panormus,Panormus
+http://nomisma.org/id/petra_arabia,Petra
+http://nomisma.org/id/cierium,Cierium
+http://nomisma.org/id/praesus,Praesus
+http://nomisma.org/id/graxa,Graxa
+http://nomisma.org/id/balbura,Balbura
+http://nomisma.org/id/hyria_campania,"Hyria Campania (Hyrietes, Hyrianoi)"
+http://nomisma.org/id/cherronesus,"Chersonesus, Tauric"
+http://nomisma.org/id/tarquinii,Tarquinii
+http://nomisma.org/id/venusia,Venusia
+http://nomisma.org/id/abbaitis,Abbaitis
+http://nomisma.org/id/nysa,Nysa
+http://nomisma.org/id/pharnaceia,Pharnaceia
+http://nomisma.org/id/populonia,Populonia
+http://nomisma.org/id/leucae,Leucae
+http://nomisma.org/id/bubon,Bubon
+http://nomisma.org/id/cydonia,Cydonia
+http://nomisma.org/id/velia,Velia
+http://nomisma.org/id/lete,Lete
+http://nomisma.org/id/pherae,Pherae
+http://nomisma.org/id/tuder,Tuder
+http://nomisma.org/id/aeneia,Aeneia
+http://nomisma.org/id/larissa_thessaly,"Larissa, Thessaly"
+http://nomisma.org/id/seleuceia_sidera,Seleuceia Sidera
+http://nomisma.org/id/olbia,Olbia
+http://nomisma.org/id/panticapaeum,Panticapaeum
+http://nomisma.org/id/taras,Taras
+http://nomisma.org/id/theodosia,Theodosia
+http://nomisma.org/id/apollonia_illyria,"Apollonia, Illyria"
+http://nomisma.org/id/eryx,Eryx
+http://nomisma.org/id/phygela,Phygela
+http://nomisma.org/id/metropolis_thessaly,Metropolis
+http://nomisma.org/id/idyma,Idyma
+http://nomisma.org/id/leontini,Leontini
+http://nomisma.org/id/siris,Siris
+http://nomisma.org/id/corcyra_corcyra,Corcyra
+http://nomisma.org/id/issus,Issus
+http://nomisma.org/id/lipara,Lipara
+http://nomisma.org/id/chaeroneia,Chaeroneia
+http://nomisma.org/id/sybaris,Sybaris
+http://nomisma.org/id/apamea_phrygiae,Apamea in Phrygia
+http://nomisma.org/id/amyzon,Amyzon
+http://nomisma.org/id/agrigentum,Agrigentum
+http://nomisma.org/id/athens,Athens
+http://nomisma.org/id/apollonia_crete,"Apollonia, Crete"
+http://nomisma.org/id/charax_spasinou,Charax Spasinou
+http://nomisma.org/id/polyrhenium,Polyrhenium
+http://nomisma.org/id/teate,Teate
+http://nomisma.org/id/thera,Thera
+http://nomisma.org/id/terone,Terone
+http://nomisma.org/id/zacynthus,Zacynthus
+http://nomisma.org/id/tegea,Tegea
+http://nomisma.org/id/elea,Elea
+http://nomisma.org/id/heraclea_minoa,Heraclea Minoa
+http://nomisma.org/id/anactorium,Anactorium
+http://nomisma.org/id/nymphaeum,Nymphaeum
+http://nomisma.org/id/thyrrheium,Thyrrheium
+http://nomisma.org/id/larissa_phriconis,Larissa Phriconis
+http://nomisma.org/id/hypana-achaean_league,Hypana
+http://nomisma.org/id/paestum,Paestum
+http://nomisma.org/id/pharae,Pharae
+http://nomisma.org/id/masicytes,Masicytes
+http://nomisma.org/id/heraea,Heraea
+http://nomisma.org/id/rhaucus,Rhaucus
+http://nomisma.org/id/lacedaemon,Lacedaemon
+http://nomisma.org/id/consentia,Consentia
+http://nomisma.org/id/ariminum,Ariminum
+http://nomisma.org/id/ialysus,Ialysus
+http://nomisma.org/id/histiaea,Histiaea
+http://nomisma.org/id/lilybaeum,Lilybaeum
+http://nomisma.org/id/nola,Nola
+http://nomisma.org/id/thronium,Thronium
+http://nomisma.org/id/berge,Berge
+http://nomisma.org/id/gela,Gela
+http://nomisma.org/id/andros,Andros
+http://nomisma.org/id/barium,Barium
+http://nomisma.org/id/aegeira,Aegeira
+http://nomisma.org/id/eion,Eion
+http://nomisma.org/id/olympe,Olympe
+http://nomisma.org/id/salapia,Salapia
+http://nomisma.org/id/cora,Cora
+http://nomisma.org/id/gortyna,Gortyn
+http://nomisma.org/id/nicaea_bithynia,Nicaea
+http://nomisma.org/id/larissa_cremaste,Larissa Cremaste
+http://nomisma.org/id/selinus_sicily,Selinus
+http://nomisma.org/id/camarina,Camarina
+http://nomisma.org/id/adana,Adana
+http://nomisma.org/id/aninetus,Aninetus
+http://nomisma.org/id/ithaca,Ithaca
+http://nomisma.org/id/patara,Patara
+http://nomisma.org/id/cassope,Cassope
+http://nomisma.org/id/solus,Solus
+http://nomisma.org/id/plarasa,Plarasa
+http://nomisma.org/id/orthe,Orthe
+http://nomisma.org/id/epiphaneia_cilicia,Epiphaneia
+http://nomisma.org/id/laus,Laüs
+http://nomisma.org/id/same,Same
+http://nomisma.org/id/myconos,Myconos
+http://nomisma.org/id/aptera,Aptera
+http://nomisma.org/id/cibyra,Cibyra
+http://nomisma.org/id/atrax,Atrax
+http://nomisma.org/id/cius,Cius
+http://nomisma.org/id/oenoe,Oenoe
+http://nomisma.org/id/tabae,Tabae
+http://nomisma.org/id/kalindoia,Kalindoia
+http://nomisma.org/id/byllis,Byllis
+http://nomisma.org/id/harpasa,Harpasa
+http://nomisma.org/id/mesma,Mesma
+http://nomisma.org/id/uncertain_caria_e,Uncertain Carian mint E
+http://nomisma.org/id/pharos,Pharos
+http://nomisma.org/id/aezanis,Aezanis
+http://nomisma.org/id/eretria,Eretria
+http://nomisma.org/id/epidaurus,Epidaurus
+http://nomisma.org/id/acanthus,Acanthus
+http://nomisma.org/id/cleitor,Cleitor
+http://nomisma.org/id/persepolis,Persepolis
+http://nomisma.org/id/ura,Ura
+http://nomisma.org/id/naxos,"Naxos, Aegean"
+http://nomisma.org/id/crannon,Crannon
+http://nomisma.org/id/iasus,Iasos
+http://nomisma.org/id/nacona,Nacona
+http://nomisma.org/id/phlius,Phlius
+http://nomisma.org/id/galaria,Galaria
+http://nomisma.org/id/cnossus,Cnossus
+http://nomisma.org/id/cragus,Cragus
+http://nomisma.org/id/hierapytna,Hierapytna
+http://nomisma.org/id/salamis_attica,Salamis
+http://nomisma.org/id/enna,Enna
+http://nomisma.org/id/phanagoria,Phanagoria
+http://nomisma.org/id/pheneus,Pheneus
+http://nomisma.org/id/corycus,Corycus
+http://nomisma.org/id/phistelia,Phistelia
+http://nomisma.org/id/dium_macedon,Dium
+http://nomisma.org/id/centuripae,Centuripae
+http://nomisma.org/id/chabacta,Chabacta
+http://nomisma.org/id/mende,Mende
+http://nomisma.org/id/hieropolis_phrygia,Hieropolis
+http://nomisma.org/id/pandosia_epirus,Pandosia
+http://nomisma.org/id/dora,Dora
+http://nomisma.org/id/methylium,Methylium
+http://nomisma.org/id/aegium,Aegium
+http://nomisma.org/id/uncertain_caria_b,Uncertain Carian mint B
+http://nomisma.org/id/pallantium,Pallantium
+http://nomisma.org/id/carthaea,Carthaea
+http://nomisma.org/id/myndus,Myndus
+http://nomisma.org/id/aperlae,Aperlae
+http://nomisma.org/id/orchomenus_boeotia,Orchomenus
+http://nomisma.org/id/scione,Scione
+http://nomisma.org/id/alyzia,Alyz(e)ia
+http://nomisma.org/id/allifae,Allifae
+http://nomisma.org/id/sinde,Sinde
+http://nomisma.org/id/melitaea,Melitaea
+http://nomisma.org/id/pelagia,Pelagia
+http://nomisma.org/id/philippi,Philippi
+http://nomisma.org/id/antiocheia_alabanda,Antiocheia (Alabanda)
+http://nomisma.org/id/chersonesus_cariae,"Chersonesus, Caria"
+http://nomisma.org/id/haliartus,Haliartus
+http://nomisma.org/id/scotussa,Scotussa
+http://nomisma.org/id/seriphos,Seriphos
+http://nomisma.org/id/ancona,Ancona
+http://nomisma.org/id/camirus,Camirus
+http://nomisma.org/id/ashdod,Ashdod
+http://nomisma.org/id/orthosia_caria,Orthosia Cariae
+http://nomisma.org/id/naxus,"Naxos, Sicily"
+http://nomisma.org/id/alaesa,Alaesa
+http://nomisma.org/id/priansus,Priansos
+http://nomisma.org/id/lindus,Lindus
+http://nomisma.org/id/attaleia,Attaleia
+http://nomisma.org/id/phellus,Phellus
+http://nomisma.org/id/cales,Cales
+http://nomisma.org/id/potidaea,Potidaea
+http://nomisma.org/id/pharcadon,Pharcadon
+http://nomisma.org/id/nagidus,Nagidus
+http://nomisma.org/id/apollonia_lycia,Apollonia in Lycia
+http://nomisma.org/id/etenna,Etenna
+http://nomisma.org/id/scyros,Scyros
+http://nomisma.org/id/cythera,Cythera
+http://nomisma.org/id/calchedon,Calchedon
+http://nomisma.org/id/tanagra,Tanagra
+http://nomisma.org/id/amisus,Amisus
+http://nomisma.org/id/adranum,Adranum
+http://nomisma.org/id/anaphe,Anaphe
+http://nomisma.org/id/hyrtacina,Hyrtacina
+http://nomisma.org/id/lisus,Lisus
+http://nomisma.org/id/uncertain_cappadocia_a,Uncertain Cappadocian Royal mint A
+http://nomisma.org/id/parlais,Parlais
+http://nomisma.org/id/hegra,Hegra
+http://nomisma.org/id/troezen,Troezen
+http://nomisma.org/id/siphnos,Siphnos
+http://nomisma.org/id/calatia,Calatia
+http://nomisma.org/id/phaestus,Phaestus
+http://nomisma.org/id/astypalaea,Astypalaea
+http://nomisma.org/id/ceramus,Ceramus
+http://nomisma.org/id/caelia,Caelia
+http://nomisma.org/id/palinurus,Palinurus
+http://nomisma.org/id/aegina_aegina,Aegina
+http://nomisma.org/id/amorium,Amorium
+http://nomisma.org/id/eleusis,Eleusis
+http://nomisma.org/id/peparethus,Peparethus
+http://nomisma.org/id/heracleia_trachinia,Heracleia Trachinia
+http://nomisma.org/id/paros,Paros
+http://nomisma.org/id/asculum,Asculum
+http://nomisma.org/id/stratoniceia,Stratoniceia
+http://nomisma.org/id/uncertain_caria_d,Uncertain Carian mint D
+http://nomisma.org/id/locri_opuntii,Locri Opuntii (Opus)
+http://nomisma.org/id/arkathiokerta,Arkathiokerta
+http://nomisma.org/id/aetna,Aetna
+http://nomisma.org/id/autocane,Autocane
+http://nomisma.org/id/uxentum,Uxentum
+http://nomisma.org/id/trapezus,Trapezus
+http://nomisma.org/id/thelpusa,Thelpusa
+http://nomisma.org/id/gaulos,Gaulos
+http://nomisma.org/id/methone_macedon,Methone
+http://nomisma.org/id/holmi,Holmi
+http://nomisma.org/id/capua,Capua
+http://nomisma.org/id/eresus,Eresus
+http://nomisma.org/id/tithorea,Tithorea
+http://nomisma.org/id/artaxata,Artaxata
+http://nomisma.org/id/selge,Selge
+http://nomisma.org/id/eriza_phrygia,Eriza
+http://nomisma.org/id/iguvium,Iguvium
+http://nomisma.org/id/dicaea_macedon,Dicaea
+http://nomisma.org/id/magnesia,Magnesia in Thessaly
+http://nomisma.org/id/rubi,Rubi
+http://nomisma.org/id/rhizos,Rhizos
+http://nomisma.org/id/tricca,Tricca
+http://nomisma.org/id/spartolus,Spartolus
+http://nomisma.org/id/motya,Motya
+http://nomisma.org/id/larinum,Larinum
+http://nomisma.org/id/damastium,Damastium
+http://nomisma.org/id/natunia,Natunia
+http://nomisma.org/id/psophis,Psophis
+http://nomisma.org/id/halieis,Halieis
+http://nomisma.org/id/aphrodisias_caria,"Aphrodisias, Caria"
+http://nomisma.org/id/cumae,Cumae
+http://nomisma.org/id/eusebeia,Eusebeia
+http://nomisma.org/id/calymna,Calymna
+http://nomisma.org/id/delos,Delos
+http://nomisma.org/id/wedrei,Wedrei
+http://nomisma.org/id/limyra,Limyra
+http://nomisma.org/id/tigranocerta,Tigranocerta
+http://nomisma.org/id/meliboea,Meliboea
+http://nomisma.org/id/segesta,Segesta
+http://nomisma.org/id/dyme,Dyme
+http://nomisma.org/id/parrhasia,Parrhasia
+http://nomisma.org/id/lamia,Lamia
+http://nomisma.org/id/adada,Adada
+http://nomisma.org/id/tenos,Tenos
+http://nomisma.org/id/patrae,Patrae
+http://nomisma.org/id/leucas,Leucas
+http://nomisma.org/id/eumeneia,Eumeneia
+http://nomisma.org/id/issa,Issa
+http://nomisma.org/id/cabeira,Cabeira
+http://nomisma.org/id/alea,Alea
+http://nomisma.org/id/chalcis_sub_libano,Chalcis sub Libano
+http://nomisma.org/id/neapolis_ad_harpasum,Neapolis ad Harpasum
+http://nomisma.org/id/axus,Axus
+http://nomisma.org/id/coressia,Coressus
+http://nomisma.org/id/iulis,Iulis
+http://nomisma.org/id/isinda,Isinda
+http://nomisma.org/id/cadyanda,Cadyanda
+http://nomisma.org/id/dioscurias,Dioscurias
+http://nomisma.org/id/caystriani,Caystriani
+http://nomisma.org/id/corone,Corone
+http://nomisma.org/id/amantia,Amantia
+http://nomisma.org/id/uncertain_caria_g,Uncertain Carian mint G
+http://nomisma.org/id/choma,Choma
+http://nomisma.org/id/poseidium,Poseidium
+http://nomisma.org/id/euippe,Euippe
+http://nomisma.org/id/phytia_acarnania,Phytia
+http://nomisma.org/id/harib_south_arabia,Harib
+http://nomisma.org/id/syros,Syros
+http://nomisma.org/id/stymphalus,Stymphalus
+http://nomisma.org/id/apollonia_salbace,Apollonia Salbace
+http://nomisma.org/id/butuntum,Butuntum
+http://nomisma.org/id/menaenum,Menaenum
+http://nomisma.org/id/morima,Morima
+http://nomisma.org/id/anticyra,Anticyra
+http://nomisma.org/id/hyria_calabria,Hyria
+http://nomisma.org/id/cys,Cys
+http://nomisma.org/id/conana,Conana
+http://nomisma.org/id/prostanna,Prostanna
+http://nomisma.org/id/argilos,Argilos
+http://nomisma.org/id/dipaea-achaean_league,Dipaea
+http://nomisma.org/id/cremna,Cremna
+http://nomisma.org/id/heraclea_lyncestis,Herakleia Lynkestis
+http://nomisma.org/id/pale,Pale
+http://nomisma.org/id/larissa_syria,"Larissa, Syria"
+http://nomisma.org/id/olus,Olus
+http://nomisma.org/id/sybrita,Sybrita
+http://nomisma.org/id/callipolis,Callipolis
+http://nomisma.org/id/beneventum,Beneventum
+http://nomisma.org/id/mateolum,Mateolum
+http://nomisma.org/id/aegae_achaea,Aegae
+http://nomisma.org/id/antiphellus,Antiphellus
+http://nomisma.org/id/pordosilene,Pordosilene
+http://nomisma.org/id/pallanum,Pallanum
+http://nomisma.org/id/mopsium,Mopsium
+http://nomisma.org/id/nesos,Nesos
+http://nomisma.org/id/copia,Copia
+http://nomisma.org/id/pinara,Pinara
+http://nomisma.org/id/alba_fucens,Alba Fucens
+http://nomisma.org/id/antiocheia_ad_cydnum,Antiocheia ad Cydnum
+http://nomisma.org/id/olophyxus,Olophyxus
+http://nomisma.org/id/caphya,Caphya
+http://nomisma.org/id/pinna,Pinna
+http://nomisma.org/id/leonnaea,Leonnaea
+http://nomisma.org/id/lyttus,Lyttus
+http://nomisma.org/id/aegiale,Aegiale
+http://nomisma.org/id/megara,Megara
+http://nomisma.org/id/suessa_aurunca,Suessa Aurunca
+http://nomisma.org/id/tragilus,Tragilus
+http://nomisma.org/id/acmoneia,Acmoneia
+http://nomisma.org/id/orthagoreia,Orthagoreia
+http://nomisma.org/id/laranda,Laranda
+http://nomisma.org/id/hipana,Hipana
+http://nomisma.org/id/olympus,Olympus in Lycia
+http://nomisma.org/id/thyatira,Thyateira
+http://nomisma.org/id/amasia,Amas(e)ia
+http://nomisma.org/id/volaterrae,Volaterrae
+http://nomisma.org/id/lappa,Lappa
+http://nomisma.org/id/cercinitis,Cercinitis
+http://nomisma.org/id/kasolaba,Kasolaba
+http://nomisma.org/id/taulara,Taulara
+http://nomisma.org/id/daparria,Daparria
+http://nomisma.org/id/pydna,Pydna
+http://nomisma.org/id/latus,Latus
+http://nomisma.org/id/aphrodisias_cilicia,"Aphrodisias, Cilicia"
+http://nomisma.org/id/metropolis_ionia,Metropolis
+http://nomisma.org/id/heraclea_ad_latmum,Herakleia ad Latmum
+http://nomisma.org/id/phalasarna,Phalasarna
+http://nomisma.org/id/zephyrium,Zephyrium
+http://nomisma.org/id/tymnessus,Tymnessus
+http://nomisma.org/id/amphissa,Amphissa
+http://nomisma.org/id/pyrrha,Pyrrha
+http://nomisma.org/id/termessus_minor,Termessus Minor
+http://nomisma.org/id/philadelpheia_lydia,Philadelphia
+http://nomisma.org/id/comama,Comama
+http://nomisma.org/id/gaziura,Gaziura
+http://nomisma.org/id/baletium,Baletium
+http://nomisma.org/id/delphi,Delphi
+http://nomisma.org/id/rhosus,Rhosus
+http://nomisma.org/id/laodiceia_pontus,Laodiceia
+http://nomisma.org/id/attuda,Attuda
+http://nomisma.org/id/apollonia_macedon,"Apollonia, Macedon"
+http://nomisma.org/id/icus,Icus
+http://nomisma.org/id/oeta,Oeta
+http://nomisma.org/id/entella,Entella
+http://nomisma.org/id/antigoneia_mantineia,Antigoneia
+http://nomisma.org/id/eleutherna,Eleutherna
+http://nomisma.org/id/myra,Myra
+http://nomisma.org/id/malienses_lamia,Malienses
+http://nomisma.org/id/araxa,Araxa (?)
+http://nomisma.org/id/tyana,Tyana
+http://nomisma.org/id/tium,Tium
+http://nomisma.org/id/azetium,Azetium
+http://nomisma.org/id/macedon,Macedon
+http://nomisma.org/id/syangela,Syangela
+http://nomisma.org/id/itanus,Itanus
+http://nomisma.org/id/arcadia_crete,Arcadia
+http://nomisma.org/id/citanaura,Citanaura
+http://nomisma.org/id/trachis,Trachis
+http://nomisma.org/id/tlos,Tlos
+http://nomisma.org/id/hatra,Hatra
+http://nomisma.org/id/carsioli,Carsioli
+http://nomisma.org/id/sarnoa,Sarnoa
+http://nomisma.org/id/cidramus,Cidramus
+http://nomisma.org/id/praeneste,Praeneste
+http://nomisma.org/id/hypata,Hypata
+http://nomisma.org/id/stageira,Stageira
+http://nomisma.org/id/lebadeia,Lebadeia
+http://nomisma.org/id/brundisium,Brundisium
+http://nomisma.org/id/oeniadae,Oeniadae
+http://nomisma.org/id/phoenice,Phoenice
+http://nomisma.org/id/teanum_sidicinum,Teanum Sidicinum
+http://nomisma.org/id/lychnidus,Lychnidus
+http://nomisma.org/id/sciathus,Sciathus
+http://nomisma.org/id/sturnium,Sturnium
+http://nomisma.org/id/echinus,Echinus
+http://nomisma.org/id/tylisus,Tylisus
+http://nomisma.org/id/dionysopolis_phrygia,Dionysopolis Phrygiae
+http://nomisma.org/id/reate,Reate
+http://nomisma.org/id/caryanda,Caryanda
+http://nomisma.org/id/neapolis_macedon,Neapolis
+http://nomisma.org/id/proni,Pronnoi
+http://nomisma.org/id/cromna,Cromna
+http://nomisma.org/id/aphytis,Aphytis
+http://nomisma.org/id/so_lucania,So
+http://nomisma.org/id/bithynium,Bithynium
+http://nomisma.org/id/olynthus,Olynthus
+http://nomisma.org/id/tavium,Tavium
+http://nomisma.org/id/seleuceia_tralles,Seleuceia (Tralles)
+http://nomisma.org/id/apollonia_ad_maeandrum,Apollonia on the Maeander
+http://nomisma.org/id/arpi,Arpi
+http://nomisma.org/id/utica,Utica
+http://nomisma.org/id/ursentum,Ursentum
+http://nomisma.org/id/arcesine,Arcesine
+http://nomisma.org/id/gordion,Gordion
+http://nomisma.org/id/casarium,Casarium
+http://nomisma.org/id/hatria,Hatria
+http://nomisma.org/id/thebae,Thebae
+http://nomisma.org/id/oricus,Oricus
+http://nomisma.org/id/ios,Ios
+http://nomisma.org/id/helisson,Helisson
+http://nomisma.org/id/lopadusa,Lopadusa
+http://nomisma.org/id/phalanna,Phalanna
+http://nomisma.org/id/apollonia_sicily,"Apollonia, Sicily"
+http://nomisma.org/id/prusias_ad_mare,Prusias ad Mare
+http://nomisma.org/id/heraclea_salbace,Heraclea Salbace
+http://nomisma.org/id/anopolis,Anopolis
+http://nomisma.org/id/coronta,Coronta
+http://nomisma.org/id/pelinna,Pelinna
+http://nomisma.org/id/cosa,Cosa
+http://nomisma.org/id/palaerus,Palaerus
+http://nomisma.org/id/olbia_city,Olbia
+http://nomisma.org/id/atella,Atella
+http://nomisma.org/id/synnada,Synnada
+http://nomisma.org/id/pharsalus,Pharsalus
+http://nomisma.org/id/peltae,Peltae
+http://nomisma.org/id/aluntium,(H)aluntium
+http://nomisma.org/id/agyrium,Agyrium
+http://nomisma.org/id/megara_hyblaea,Megara Hyblaea
+http://nomisma.org/id/alexandreia_ad_issum,Alexandreia ad Issum
+http://nomisma.org/id/gorgippia,Gorgippia
+http://nomisma.org/id/uncertain_caria_c,Uncertain Carian mint C
+http://nomisma.org/id/gonnus,Gonnoi
+http://nomisma.org/id/volcei,Volcei
+http://nomisma.org/id/gyrton,Gyrton
+http://nomisma.org/id/aerae,Aerae
+http://nomisma.org/id/coroneia,Coroneia
+http://nomisma.org/id/theisoa,Theisoa
+http://nomisma.org/id/orchomenus_arcadia,Orchomenus
+http://nomisma.org/id/oloosson,Oloosson
+http://nomisma.org/id/vulci,Vulci
+http://nomisma.org/id/hippus,Hippos (Sussita)
+http://nomisma.org/id/capsa,Capsa
+http://nomisma.org/id/thaliadae,Thaliadae
+http://nomisma.org/id/meles,Meles
+http://nomisma.org/id/olympus_aeolis,Olympus in Aeolis
+http://nomisma.org/id/serdaei,Serd
+http://nomisma.org/id/hydrela,Hydrela
+http://nomisma.org/id/aemilium,Aemilium
+http://nomisma.org/id/phasis,Phasis
+http://nomisma.org/id/cythnos,Cythnos
+http://nomisma.org/id/hybla_magna,Hybla Magna
+http://nomisma.org/id/uncertain_cappadocia_c,Uncertain Cappadocian Royal mint C
+http://nomisma.org/id/phoinix,Phoinikous
+http://nomisma.org/id/iaetia,Iaetia
+http://nomisma.org/id/trebendae,Trebendae
+http://nomisma.org/id/golgi,Golgoi
+http://nomisma.org/id/phacium,Phacium
+http://nomisma.org/id/cichyrus,Cichyrus
+http://nomisma.org/id/arsinoe_crete,"Arsinoe, Crete"
+http://nomisma.org/id/neretum,Neretum
+http://nomisma.org/id/isaura,Isaura
+http://nomisma.org/id/vetulonia,Vetulonia
+http://nomisma.org/id/herbita,Herbita
+http://nomisma.org/id/ameselon,Ameselon
+http://nomisma.org/id/firmum,Firmum
+http://nomisma.org/id/plataea,Plataea
+http://nomisma.org/id/ariassus,Ariassus
+http://nomisma.org/id/peirasiae,Peirasiae
+http://nomisma.org/id/myrina_crete,Myrina
+http://nomisma.org/id/pisae_etruria,Pisae
+http://nomisma.org/id/medeon,Medeon
+http://nomisma.org/id/aquinum,Aquinum
+http://nomisma.org/id/herbessus,Herbessus
+http://nomisma.org/id/andeda,Andeda
+http://nomisma.org/id/zagaba,Zagaba
+http://nomisma.org/id/cephaloedium,Cephaloedium
+http://nomisma.org/id/idalium,Idalium
+http://nomisma.org/id/thyessus,Thyessus
+http://nomisma.org/id/antissa,Antissa
+http://nomisma.org/id/samadi,Samadi
+http://nomisma.org/id/hyporum,Hyporum
+http://nomisma.org/id/cleonae,Cleonae
+http://nomisma.org/id/oropus,Oropus
+http://nomisma.org/id/ceryneia,Ceryneia
+http://nomisma.org/id/thuria,Thuria
+http://nomisma.org/id/chersonesus_crete,"Chersonesus, Crete"
+http://nomisma.org/id/blaundus,Blaundus
+http://nomisma.org/id/kamos,Kamos
+http://nomisma.org/id/methydrium_arcadia,Methydrium
+http://nomisma.org/id/heracleia_illyricum,Heracleia
+http://nomisma.org/id/cyane,Cyaneae
+http://nomisma.org/id/appia,Appia
+http://nomisma.org/id/telos,Telos
+http://nomisma.org/id/oeantheia,Oeantheia
+http://nomisma.org/id/hydisus,Hydisus
+http://nomisma.org/id/seleuceia_ad_pyramum,Seleuceia ad Pyramum
+http://nomisma.org/id/arycanda,Arycanda
+http://nomisma.org/id/cybistra,Cybistra
+http://nomisma.org/id/nuceria,Nuceria
+http://nomisma.org/id/pessinus,Pessinus
+http://nomisma.org/id/biannos,Biannos
+http://nomisma.org/id/astacus_acarnania,Astacus (Acarnania)
+http://nomisma.org/id/termera,Termera
+http://nomisma.org/id/uncertain_caria_f,Uncertain Carian mint F
+http://nomisma.org/id/moda,Moda
+http://nomisma.org/id/calacte,Calacte
+http://nomisma.org/id/iconium,Iconium
+http://nomisma.org/id/sermyle,Sermylia
+http://nomisma.org/id/nuceria_alfaterna,Nuceria Alfaterna
+http://nomisma.org/id/naulochus,Naulochus
+http://nomisma.org/id/anisa,Anisa
+http://nomisma.org/id/gagae,Gagae
+http://nomisma.org/id/metropolis_acarnania,Metropolis
+http://nomisma.org/id/ceraitae,Keraia
+http://nomisma.org/id/hieracome,Hieracome
+http://nomisma.org/id/sicinos,Sicinos
+http://nomisma.org/id/piacus,Piacus
+http://nomisma.org/id/argos_amphilochicum,Argos Amphilochicum
+http://nomisma.org/id/uncertain_cappadocia_b,Uncertain Cappadocian Royal mint B
+http://nomisma.org/id/nisa_lycia,Nisa
+http://nomisma.org/id/mytistratus,Mytistratus
+http://nomisma.org/id/kronia,Kronia
+http://nomisma.org/id/sesamus,Sesamus
+http://nomisma.org/id/bargasa,Bargasa
+http://nomisma.org/id/mycalessus,Mycalessus
+http://nomisma.org/id/cimolos,Cimolos
+http://nomisma.org/id/colossae,Colossae
+http://nomisma.org/id/gerasa,Gerasa
+http://nomisma.org/id/anazarbus,Anazarbus
+http://nomisma.org/id/rhizon,Rhizon
+http://nomisma.org/id/helice,Helice
+http://nomisma.org/id/irnthii,Irnthii
+http://nomisma.org/id/posidium,"Posideion, Syria"
+http://nomisma.org/id/cimissa,Cimissa
+http://nomisma.org/id/phaloria,Phaloria
+http://nomisma.org/id/gadara,Gadara
+http://nomisma.org/id/dia,Dia
+http://nomisma.org/id/eurea,Eurea
+http://nomisma.org/id/pednelissus,Pednelissus
+http://nomisma.org/id/larbenoi,Larbenoi
+http://nomisma.org/id/gamla_galilaea,Gamla
+http://nomisma.org/id/lusi-achaean_league,Lusi
+http://nomisma.org/id/candyba,Candyba
+http://nomisma.org/id/cossura,Cossura
+http://nomisma.org/id/pholegandros,Pholegandros
+http://nomisma.org/id/oenoanda,Oenoanda
+http://nomisma.org/id/stiela,Stiela
+http://nomisma.org/id/scarpheia,Scarpheia
+http://nomisma.org/id/mostene,Mostene
+http://nomisma.org/id/grynium,Grynium
+http://nomisma.org/id/paropus,Paropus
+http://nomisma.org/id/ceraea,Ceraea
+http://nomisma.org/id/elyrus,Elyrus
+http://nomisma.org/id/comana,Comana
+http://nomisma.org/id/darado,Darado
+http://nomisma.org/id/astacus_bithynia,Astacus (Bithynia)
+http://nomisma.org/id/silerae,Silerae
+http://nomisma.org/id/apollonis,Apollonis
+http://nomisma.org/id/pimolisa,Pimolisa
+http://nomisma.org/id/mothone,Mothone
+http://nomisma.org/id/sergetion,Sergetion
+http://nomisma.org/id/calynda,Calynda
+http://nomisma.org/id/allaria,Allaria
+http://nomisma.org/id/athl_sicily,"Athl..., Sicily"
+http://nomisma.org/id/thespiae,Thespiae
+http://nomisma.org/id/grumum,Grumum
+http://nomisma.org/id/eurydiceia,Eurydiceia (Smyrna)
+http://nomisma.org/id/myrina_lemni,Myrina
+http://nomisma.org/id/dia_thessaly,Dia
+http://nomisma.org/id/maleventum,Maleventum
+http://nomisma.org/id/hyrium,Hyrium
+http://nomisma.org/id/silvium,Silvium
+http://nomisma.org/id/ichnae,Ichnae
+http://nomisma.org/id/rhodiapolis,Rhodiapolis
+http://nomisma.org/id/me_bruttium,Me...
+http://nomisma.org/id/alipheira-achaean_league,Alipheira
+http://nomisma.org/id/acerrae,Acerrae
+http://nomisma.org/id/scodra,Scodra
+http://nomisma.org/id/peumata,Peumata
+http://nomisma.org/id/gyaros,Gyaros
+http://nomisma.org/id/poteidania,Poteidania
+http://nomisma.org/id/norba,Norba
+http://nomisma.org/id/asea,Asea
+http://nomisma.org/id/ziz,Ziz
+http://nomisma.org/id/homolium,Homolium
+http://nomisma.org/id/methana,Methana
+http://nomisma.org/id/leontion,Leontion
+http://nomisma.org/id/copae,Copae
+http://nomisma.org/id/abonuteichos,Abonuteichos
+http://nomisma.org/id/amestratus,Amestratus
+http://nomisma.org/id/acraephia,Acraephia
+http://nomisma.org/id/apollonia_aetolia,Apollonia in Aetolia
+http://nomisma.org/id/eurymenae,Eurymenae
+http://nomisma.org/id/telesia,Telesia
+http://nomisma.org/id/boeone,Boeone
+http://nomisma.org/id/longane,Longane
+http://nomisma.org/id/savatra,Savatra
+http://nomisma.org/id/pandosia_bruttium,Pandosia
+http://nomisma.org/id/gordiuteichos,Gordiuteichos
+http://nomisma.org/id/tisna,Tisna
+http://nomisma.org/id/cibyra_minor,Cibyra Minor
+http://nomisma.org/id/aquilonia,Aquilonia
+http://nomisma.org/id/zela,Zela
+http://nomisma.org/id/colone_messenia,Colone
+http://nomisma.org/id/eccarra,Eccarra
+http://nomisma.org/id/latmus,Latmos
+http://nomisma.org/id/dodona,Dodona
+http://nomisma.org/id/minoa,Minoa
+http://nomisma.org/id/myus,Myus
+http://nomisma.org/id/larymna,Larymna
+http://nomisma.org/id/teuthis-achaean_league,Teuthis
+http://nomisma.org/id/lysias,Lysias
+http://nomisma.org/id/prusa_ad_olympum,Prusa ad Olympum
+http://nomisma.org/id/acrae,Acrae
+http://nomisma.org/id/phigaleia,Phigaleia
+http://nomisma.org/id/asine,Asine
+http://nomisma.org/id/stratoniceia_hadrianpolis,Stratoniceia-Hadrianopolis
+http://nomisma.org/id/amblada,Amblada
+http://nomisma.org/id/halus,Halus
+http://nomisma.org/id/iolcus,Iolkos
+http://nomisma.org/id/aesernia,Aesernia
+http://nomisma.org/id/temesa,Temesa
+http://nomisma.org/id/neapolis_apulia,Neapolis
+http://nomisma.org/id/pagae,Pagae
+http://nomisma.org/id/caiatia,Caiatia
+http://nomisma.org/id/cithus,Cithus (?)
+http://nomisma.org/id/scylletium,Scylletium
+http://nomisma.org/id/compulteria,Compulteria
+http://nomisma.org/id/demetrias_syria,Demetrias
+http://nomisma.org/id/teucheira,Teucheira
+http://nomisma.org/id/pompeiopolis,Pompeiopolis
+http://nomisma.org/id/kallistai_achaea,Kallistai
+http://nomisma.org/id/podalia,Podalia
+http://nomisma.org/id/prymnessus,Prymnessus
+http://nomisma.org/id/aegirus,Aegirus
+http://nomisma.org/id/amorgos_amorgos,Amorgos
+http://nomisma.org/id/caena,Caena
+http://nomisma.org/id/pedasa,Pedasa
+http://nomisma.org/id/cranaus,Cranaus
+http://nomisma.org/id/neonteichos,Neonteichos
+http://nomisma.org/id/philomelium,Philomelium
+http://nomisma.org/id/torhybeion,Torhybeion
+http://nomisma.org/id/tenea,Tenea
+http://nomisma.org/id/anemurium,Anemurium
+http://nomisma.org/id/sarbanissa,Sarbanissa
+http://nomisma.org/id/ami_naea,Ami(naea)
+http://nomisma.org/id/gortys-achaean_league,Gortys
+http://nomisma.org/id/proerna,Proerna
+http://nomisma.org/id/uncertain_caria_h,Uncertain Carian mint H
+http://nomisma.org/id/peripolium,Peripolium
+http://nomisma.org/id/Ptolemais_lebedus,Ptolemais (Lebedus)
+http://nomisma.org/id/imachara,Imachara
+http://nomisma.org/id/corcyra_nigra,Corcyra Nigra
+http://nomisma.org/id/cormasa,Kormasa
+http://nomisma.org/id/frentrum,Frentrum
+http://nomisma.org/id/sidyma,Sidyma
+http://nomisma.org/id/chalke,Chalke
+http://nomisma.org/id/malus,Malus
+http://nomisma.org/id/sanaus,Sanaus
+http://nomisma.org/id/signia,Signia
+http://nomisma.org/id/uncertain_caria_a,Uncertain Carian mint A
+http://nomisma.org/id/cirta,Cirta
+http://nomisma.org/id/siga,Siga
+http://nomisma.org/id/epidamnus,Epidamnus
+http://nomisma.org/id/pagasae,Pagasae
+http://nomisma.org/id/pisa,Pisa
+http://nomisma.org/id/arsinoe_ephesus,Arsinoe (Ephesus)
+http://nomisma.org/id/nicopolis_ad_istrum,Nicopolis ad Istrum
+http://nomisma.org/id/hadrianeia,Hadrianeia
+http://nomisma.org/id/chersonesus_thrace,"Chersonesus, Thrace"
+http://nomisma.org/id/hadrianopolis_thrace,Hadrianopolis
+http://nomisma.org/id/augusta_trajana,Augusta Traiana
+http://nomisma.org/id/philippopolis,Philippopolis
+http://nomisma.org/id/pitane,Pitane
+http://nomisma.org/id/marcianopolis,Marcianopolis
+http://nomisma.org/id/attaea,Attaea
+http://nomisma.org/id/hamaxitus,Hamaxitus
+http://nomisma.org/id/adramyteum,Adramyteum
+http://nomisma.org/id/dionysopolis_thrace,Dionysopolis
+http://nomisma.org/id/topirus,Topirus
+http://nomisma.org/id/thasos,Thasos
+http://nomisma.org/id/perperene,Perperene
+http://nomisma.org/id/hadrianothera,Hadrianothera
+http://nomisma.org/id/gambrium,Gambrium
+http://nomisma.org/id/antandrus,Antandrus
+http://nomisma.org/id/dardanus,Dardanus
+http://nomisma.org/id/bizya,Bizya
+http://nomisma.org/id/deultum,Deultum
+http://nomisma.org/id/apollonia_ad_rhyndacum,Apollonia ad Rhyndacum
+http://nomisma.org/id/pautalia,Pautalia
+http://nomisma.org/id/apollonia_pontica,Apollonia Pontica
+http://nomisma.org/id/zone,Zone
+http://nomisma.org/id/madytus,Madytus
+http://nomisma.org/id/cebren,Cebren
+http://nomisma.org/id/miletopolis,Miletopolis
+http://nomisma.org/id/priapus,Priapus
+http://nomisma.org/id/perinthus,Perinthus
+http://nomisma.org/id/proconnesus,Proconnesus
+http://nomisma.org/id/lamponeia,Lamponeia
+http://nomisma.org/id/anchialus,Anchialus
+http://nomisma.org/id/hephaestia,Hephaestia
+http://nomisma.org/id/coela,Coela
+http://nomisma.org/id/hadriani_ad_olympum,Hadriani ad Olympum
+http://nomisma.org/id/atarneus,Atarneus
+http://nomisma.org/id/orthagoreia_thrace,Orthagoreia
+http://nomisma.org/id/placia,Placia
+http://nomisma.org/id/selymbria,Selymbria
+http://nomisma.org/id/germe,Germe
+http://nomisma.org/id/trajanopolis_thrace,Trajanopolis
+http://nomisma.org/id/lemnos,Lemnos
+http://nomisma.org/id/thebe,Thebe
+http://nomisma.org/id/dicaea_thrace,Dicaea
+http://nomisma.org/id/alopeconnesus,Alopeconnesus
+http://nomisma.org/id/neandria,Neandria
+http://nomisma.org/id/gergis,Gergis
+http://nomisma.org/id/achilleion,Achilleion
+http://nomisma.org/id/gargara,Gargara
+http://nomisma.org/id/plotinopolis,Plotinopolis
+http://nomisma.org/id/ophrynium,Ophrynium
+http://nomisma.org/id/antiocheia_cebren,Antiocheia (Cebren)
+http://nomisma.org/id/bisanthe,Bisanthe
+http://nomisma.org/id/elaeus,Elaeus
+http://nomisma.org/id/rhoeteium,Rhoeteium
+http://nomisma.org/id/harpagion,Harpagion
+http://nomisma.org/id/gentinus,Gentinus
+http://nomisma.org/id/thymbra,Thymbra
+http://nomisma.org/id/imbros,Imbros
+http://nomisma.org/id/astyra_mysia,Astyra
+http://nomisma.org/id/poimanenum,Poimanenum
+http://nomisma.org/id/cypsela,Cypsela
+http://nomisma.org/id/colone_troas,Colone
+http://nomisma.org/id/teuthrania,Teuthrania
+http://nomisma.org/id/zeleia,Zeleia
+http://nomisma.org/id/cardia,Cardia
+http://nomisma.org/id/scamandria,Scamandria
+http://nomisma.org/id/nicopolis_ad_nestum,Nicopolis ad Nestum
+http://nomisma.org/id/crithote,Crithote
+http://nomisma.org/id/iolla,Iolla
+http://nomisma.org/id/birytis,Birytis
+http://nomisma.org/id/eleutherion,Eleutherion
+http://nomisma.org/id/Paktye,Pactye
+http://nomisma.org/id/agathopolis,Agathopolis
+http://nomisma.org/id/came,Came
+http://nomisma.org/id/cisthene,Cisthene
+http://nomisma.org/id/aegospotami,Aegospotami
+http://nomisma.org/id/trierus,Trie[rus]?
+http://nomisma.org/id/apros,Apros
+http://nomisma.org/id/yehud_mint,Yehud Mint
+http://nomisma.org/id/philistian_mint,Philistian Mint
+http://nomisma.org/id/larissa_troas,"Larissa, Troas"
+http://nomisma.org/id/uncertain_thrace,Uncertain mint Thrace
+http://nomisma.org/id/mastaura,Mastaura
+http://nomisma.org/id/toriaion,Toriaion
+http://nomisma.org/id/kleonnaeion,Kleonaeion
+http://nomisma.org/id/coropissus,Coropissus
+http://nomisma.org/id/heracleia_ad_sipylum,Heracleia ad Sipylum
+http://nomisma.org/id/stectorium,Stectorium
+http://nomisma.org/id/dorylaeum,Dorylaeum
+http://nomisma.org/id/uncertain_cappadocia_d,Uncertain Cappadocian Royal mint D

@@ -1,0 +1,1785 @@
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+body {
+  background: #111111;
+}
+
+.tooltip-container {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+  z-index: 1000;
+}
+
+[data-tooltip] {
+  cursor: default;
+}
+
+.tooltip-info {
+  position: absolute;
+  padding: 5px 10px;
+  background: white;
+  color: black;
+  border-radius: 5px;
+  font-size: 16px;
+  white-space: nowrap;
+  border: solid 1px rgba(50, 50, 50, 0.5);
+  box-shadow: 0 0 20px 1px rgba(50, 50, 50, 0.25);
+  max-width: 250px;
+  text-wrap: pretty;
+  z-index: 1000;
+}
+.tooltip-info:after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%) rotate(180deg);
+  border-width: 5px;
+  border-style: solid;
+  border-color: rgba(50, 50, 50, 0.5) transparent transparent transparent;
+}
+
+.tooltip-arrow {
+  width: 0;
+  height: 0;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  bottom: -8px;
+  margin-left: -5px;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #494949;
+}
+.tooltip-arrow-border {
+  width: 4px;
+  height: 4px;
+  background: #494949;
+  transform: translateX(-50%) translateY(-8px);
+  border-radius: 0 0 5px 5px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: Open Sans;
+}
+
+a {
+  text-decoration: none;
+}
+
+.hidden {
+  display: none;
+}
+
+#coincatalogue {
+  display: inline-flex;
+  padding: 10px;
+  vertical-align: top;
+}
+#coincatalogue .coin-table {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
+}
+#coincatalogue .coin-table .coin-thead .coin-tr {
+  display: flex;
+  flex-direction: row;
+}
+#coincatalogue .coin-table .coin-thead span {
+  flex: 1;
+  padding: 10px 0;
+  font-weight: bold;
+}
+#coincatalogue .coin-table .coin-thead span:first-child {
+  display: none;
+}
+#coincatalogue .coin-table .coin-thead span:not(:first-child) {
+  flex: 1;
+}
+#coincatalogue .coin-table .coin-thead span:last-child {
+  display: none;
+}
+#coincatalogue .coin-table .coin-tbody .coin-tr {
+  margin-bottom: 10px;
+}
+#coincatalogue .coin-table .coin-tbody .coin-tr-main {
+  display: flex;
+  flex-direction: row;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e1e1e1;
+  border-radius: 5px;
+  overflow: hidden;
+  background: rgba(255, 106, 0, 0.35);
+  cursor: pointer;
+}
+#coincatalogue .coin-table .coin-tbody .coin-tr-main:hover {
+  background: rgba(255, 106, 0, 0.5);
+}
+#coincatalogue .coin-table .coin-tbody .coin-tr-main > span {
+  flex: 1;
+  padding: 10px;
+  border-right: 1px solid #e1e1e1;
+}
+#coincatalogue .coin-table .coin-tbody .coin-tr-main > span:first-child {
+  display: none;
+}
+#coincatalogue .coin-table .coin-tbody .coin-tr-main > span:not(:first-child) {
+  flex: 1;
+}
+#coincatalogue .coin-table .coin-tbody .coin-tr-main > span:last-child {
+  flex: 0 0 10%;
+  border-right: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+}
+#coincatalogue .coin-table .coin-tbody .coin-tr-main > span:last-child .editRow > span {
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  padding: 5px;
+  cursor: pointer;
+}
+#coincatalogue .coin-table .coin-tbody .coin-tr-main > span:last-child .editRow > span:hover {
+  background: rgba(255, 255, 255, 0.75);
+}
+#coincatalogue .coin-table .coin-tbody .coin-tr-main > span .tagContainer {
+  position: relative;
+  left: 0;
+  height: auto;
+}
+#coincatalogue .coin-table .coin-tbody .coin-tr-main > span .keywords {
+  margin-top: 10px;
+}
+#coincatalogue .coin-table .coin-tbody .coin-tr-main > span .keywords .title, #coincatalogue .coin-table .coin-tbody .coin-tr-main > span .keywords .keywordlist {
+  display: flex;
+  flex-wrap: wrap;
+}
+/* Steven Nowak*/
+#coincatalogue .coin-table .coin-tbody .coin-tr-main > span .keywords .keywordlist {
+  border-radius: 7px; 
+  position: relative;
+  width: 85%; 
+  height: 100px; 
+  max-width: 300px;
+  overflow-x: auto; 
+  overflow-y: auto; 
+  border: 1px solid #000000;
+}
+/* Kommentar Anfang Update Steven Nowak Visuals of Keywords in Coins Changed depending on data-negated*/
+
+#coincatalogue .coin-table .coin-tbody .coin-tr-main > span .keywords .keywordlist span {
+  position: relative;
+  padding: 0 5px;
+  color: black;
+  /*Steven Nowak made Background fully Transperent*/
+  background: rgba(0, 0, 0, 0);
+  margin-right: 10px;
+  margin-bottom: 10px;
+  height: 30px;
+  display: inline-block;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: fill-available;
+  /*font-weight: bold;*/
+}
+/*
+#coincatalogue .coin-table .coin-tbody .coin-tr-main > span .keywords .keywordlist span[data-negated=false] {
+  background: rgb(0, 255, 0);
+}
+#coincatalogue .coin-table .coin-tbody .coin-tr-main > span .keywords .keywordlist span[data-negated=true] {
+  background: rgb(255, 0, 0);
+}
+  */
+#coincatalogue .coin-table .coin-tbody .coin-tr-main > span .keywords .keywordlist span::before {
+  font-size: 22px;  
+  margin-right: 1px;
+  padding: 0 0 0 1px;
+  /*Steven Nowak made Background fully Transperent*/
+  background: rgba(0, 0, 0, 0);
+  text-shadow:
+        0.03em 0 black,
+        0 0.03em black,
+        -0.03em 0 black,
+        0 -0.03em black,
+        -0.03em -0.03em black,
+        -0.03em 0.03em black,
+        0.03em -0.03em black,
+        0.03em 0.03em black;
+}
+#coincatalogue .coin-table .coin-tbody .coin-tr-main > span .keywords .keywordlist span[data-negated=false]::before {
+  content: '+'; 
+  color: rgb(0, 255, 0);
+}
+#coincatalogue .coin-table .coin-tbody .coin-tr-main > span .keywords .keywordlist span[data-negated=true]::before {
+  content: '-'; 
+  color: rgb(255, 0, 0); 
+}
+/*
+#coincatalogue .coin-table .coin-tbody .coin-tr-main > span .keywords .keywordlist span[data-negated=false]::before {
+  content: '+'; 
+  background: rgb(0, 255, 0);
+}
+#coincatalogue .coin-table .coin-tbody .coin-tr-main > span .keywords .keywordlist span[data-negated=true]::before {
+  content: '-'; 
+  background: rgb(255, 0, 0); 
+}
+*/
+/* Kommentar Ende Update Steven Nowak Visuals of Keywords in Coins Changed depending on data-negated*/
+#coincatalogue .coin-table .coin-tbody .coin-tr:nth-child(even) .coin-tr-main {
+  background: rgba(255, 106, 0, 0.2);
+}
+#coincatalogue .coin-table .coin-tbody .coin-tr:nth-child(even) .coin-tr-main:hover {
+  background: rgba(255, 106, 0, 0.5);
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
+}
+
+.tagContainer {
+  position: absolute;
+  top: 0;
+  left: 40px;
+  z-index: 2;
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+.tagContainer .tag {
+  display: inline-flex;
+  padding: 5px 7.5px;
+  border-radius: 5px;
+  border: solid 1px rgb(0, 0, 0);
+  color: rgb(0, 0, 0);
+  margin-left: 2px;
+  background: #fce4d0;
+}
+/* Steven Nowak 14.12.2024-------------------------------- */
+.tagContainer .material-symbols-outlined {
+  text-shadow:
+        0.03em 0 black,
+        0 0.03em black,
+        -0.03em 0 black,
+        0 -0.03em black,
+        -0.03em -0.03em black,
+        -0.03em 0.03em black,
+        0.03em -0.03em black,
+        0.03em 0.03em black;
+}
+.tagContainer .tag.animal .material-symbols-outlined {
+  color: rgb(255, 0, 0);
+}
+.tagContainer .tag.object .material-symbols-outlined {
+  color: rgb(255, 153, 0);
+}
+.tagContainer .tag.plant .material-symbols-outlined {
+  color: rgb(11, 255, 0);
+}
+.tagContainer .tag.relation .material-symbols-outlined {
+  color: rgb(251, 255, 0);
+}
+.tagContainer .tag.person .material-symbols-outlined {
+  color: rgb(152, 26, 202);
+}
+.tagContainer .tag.category .material-symbols-outlined {
+  color: rgb(0, 195, 255);
+
+}
+.tagContainer .tag.nothing .material-symbols-outlined {
+  color: rgb(99, 99, 99);
+}
+/* Old Version */
+/* Update Start Steven Nowak Colors Changed */
+/*
+.tagContainer .tag {
+  display: inline-flex;
+  padding: 5px 7.5px;
+  border-radius: 5px;
+  color: rgb(255, 255, 255);
+  margin-left: 2px;
+}
+.tagContainer .tag.animal {
+  background: rgb(255, 0, 0);
+}
+.tagContainer .tag.object {
+  background: rgb(88, 52, 34);
+}
+.tagContainer .tag.plant {
+  background: rgb(11, 255, 0);
+
+}
+.tagContainer .tag.relation {
+  background: rgb(0, 195, 255);
+}
+.tagContainer .tag.person {
+  background: rgb(152, 26, 202);
+}
+.tagContainer .tag.category {
+  background: rgb(0, 0, 0);
+}
+.tagContainer .tag.nothing {
+  background: rgb(99, 99, 99);
+}
+*/
+/* Update End Steven Nowak Colors Changed */
+#relationMenu {
+  position: fixed;
+  left: 50vw;
+  top: 20px;
+  width: 75vw;
+  height: calc(100vh - 40px);
+  max-height: 1040px;
+  min-width: 1024px;
+  max-width: 1440px;
+  transform: translateX(-50%);
+  background: white;
+  border-radius: 10px;
+  z-index: 30000; /* Update by Nico Lambert, higher z-index */
+  box-shadow: 0 0 50px 1px rgba(0, 0, 0, 0.25);
+}
+ /*Update by Steven Nowak split padding Values*/
+#relationMenu .topbar {
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 20px;
+}
+/*Update by Steven Nowak removed margin-top*/
+#relationMenu .topbar #relationEditorWrapper {
+  display: block;
+  border: solid 1px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+}
+#relationMenu .topbar #relationEditorWrapper #relationEditor {
+  flex: 1;
+  margin: 10px;
+  font-size: 22px;
+  border-style: none;
+  resize: none;
+  padding: 10px;
+  align-self: center;
+  overflow-y: scroll;
+  max-height: 3vh;
+}
+#relationMenu .topbar #relationEditorWrapper #relationEditor .id {
+  padding: 2px 9px;
+  background: rgba(252, 107, 0, 0.25);
+  border-radius: 10px;
+  text-transform: uppercase;
+}
+#relationMenu .topbar #relationEditorWrapper #relationEditor .op {
+  margin: 5px;
+}
+#relationMenu .topbar #relationEditorWrapper #relationEditor .op.p_open::before {
+  content: "(";
+  font-size: 1.25em;
+}
+#relationMenu .topbar #relationEditorWrapper #relationEditor .op.p_close::before {
+  content: ")";
+  font-size: 1.25em;
+}
+#relationMenu .topbar #relationEditorWrapper #relationEditor .op.and::before {
+  content: "AND";
+  font-size: 1em;
+}
+#relationMenu .topbar #relationEditorWrapper #relationEditor .op.or::before {
+  content: "OR";
+  font-size: 1em;
+}
+#relationMenu .topbar #relationEditorWrapper #relationEditor .op.not::before {
+  content: "NOT";
+  font-size: 1em;
+}
+#relationMenu .topbar #relationEditorWrapper #catalogueWrapper {
+  display: flex;
+  width: 100%;
+  border-top: solid 1px rgba(0, 0, 0, 0.25);
+}
+#relationMenu .topbar #relationEditorWrapper #catalogueWrapper #coincatalogue {
+  flex: 5;
+  padding: 10px;
+  overflow-y: auto;
+  border-right: solid 1px rgba(0, 0, 0, 0.25);
+}
+#relationMenu .topbar #relationEditorWrapper #catalogueWrapper #coincatalogue .coin-table {
+  width: 100%;
+}
+#relationMenu .topbar #relationEditorWrapper #catalogueWrapper #coincatalogue .coin-table .coin-thead .coin-tr {
+  display: flex;
+  flex-direction: row;
+  border-right: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+}
+#relationMenu .topbar #relationEditorWrapper #catalogueWrapper #coincatalogue .coin-table .coin-thead span:first-child {
+  display: flex;
+  flex: 0 0 5%;
+  padding: 10px;
+}
+#relationMenu .topbar #relationEditorWrapper #catalogueWrapper #coincatalogue .coin-table .coin-thead span:last-child {
+  display: flex;
+}
+#relationMenu .topbar #relationEditorWrapper #catalogueWrapper #coincatalogue .coin-table .coin-tbody .coin-tr {
+  margin-bottom: 10px;
+}
+#relationMenu .topbar #relationEditorWrapper #catalogueWrapper #coincatalogue .coin-table .coin-tbody .coin-tr-main:hover {
+  background: rgba(255, 106, 0, 0.5);
+}
+#relationMenu .topbar #relationEditorWrapper #catalogueWrapper #coincatalogue .coin-table .coin-tbody .coin-tr-main > span:first-child {
+  display: flex;
+  flex-direction: row;
+  border-right: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  flex: 0 0 5%;
+}
+#relationMenu .topbar #relationEditorWrapper #catalogueWrapper #coincatalogue .coin-table .coin-tbody .coin-tr-main > span:not(:first-child) {
+  flex: 1;
+}
+#relationMenu .topbar #relationEditorWrapper #catalogueWrapper #coincatalogue .coin-table .coin-tbody .coin-tr-main > span:last-child {
+  display: none;
+}
+#relationMenu .topbar #relationEditorWrapper #catalogueWrapper #operatorcatalogue {
+  flex: 1;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+#relationMenu .topbar #relationEditorWrapper #catalogueWrapper #operatorcatalogue .calculator-grid {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 10px;
+}
+#relationMenu .topbar #relationEditorWrapper #catalogueWrapper #operatorcatalogue .calculator-grid button {
+  flex: 1 1 calc(50% - 10px);
+  padding: 20px;
+  font-size: 16px;
+  border: 1px solid #e1e1e1;
+  border-radius: 5px;
+  cursor: pointer;
+  background: #9bddea;
+}
+#relationMenu .topbar #relationEditorWrapper #catalogueWrapper #operatorcatalogue .calculator-grid button:hover {
+  background-color: #5ed3ea;
+}
+#relationMenu .topbar #relationEditorWrapper #catalogueWrapper #operatorcatalogue .calculator-grid .clear {
+  flex-basis: 100%;
+}
+#relationMenu .topbar #relationEditorWrapper #catalogueWrapper #coincatalogue, #relationMenu .topbar #relationEditorWrapper #catalogueWrapper #operatorcatalogue {
+  display: inline-flex;
+  padding: 10px;
+  vertical-align: top;
+  max-height: 280px;
+}
+#relationMenu .bottombar {
+  padding: 0 40px;
+}
+#relationMenu .bottombar #sparqleditor {
+  padding: 0.25vh; /* Update by Nico Lambert, padding to 2px */
+  border-radius: 20px;
+}
+#relationMenu .bottombar #sparqleditor h2 {
+  padding: 10px 0;
+}
+#relationMenu .bottombar #sparqleditor .editortabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 10px 0;
+}
+#relationMenu .bottombar #sparqleditor .editortabs button {
+  padding: 5px 20px;
+  border-radius: 7px;
+  font-weight: 400;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  background: #ffffff;
+  border: solid 1px #999999;
+}
+#relationMenu .bottombar #sparqleditor .editortabs button:hover {
+  background-color: #EEEEEE;
+}
+#relationMenu .bottombar #sparqleditor .cm-s-default {
+  background: #EEEEEE;
+  width: 100%;
+  height: 30 vh; /* Update by Nico Lambert, height to 30vh */
+  overflow-y: scroll; /* Update by Nico Lambert, overflow-y scroll */
+}
+#relationMenu .bottombar .button-group {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 0;
+}
+#relationMenu .bottombar .button-group button {
+  display: flex; /* Update by Nico Lambert, display flex */
+  padding: 10px 10px; /*Update by Nico Lambert, padding to 10px */
+  margin-bottom: 20px;
+  border-radius: 7px;
+  font-weight: 400;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  
+}
+
+/* Update by Nico Lambert: #relationMenu .topbar .button-group: added styles */
+#relationMenu .bottombar .button-group{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 10px 0;
+}
+
+#relationMenu .bottombar .button-group button.save {
+  background-color: #00913b;
+  color: white;
+}
+#relationMenu .bottombar .button-group button.save:hover {
+  background-color: #006328;
+}
+#relationMenu .bottombar .button-group button.close {
+  background-color: white;
+  color: #333333;
+  border: solid 1px #555555;
+}
+#relationMenu .bottombar .button-group button.close:hover {
+  background-color: #E9E9E9;
+}
+
+#coinEditorMenu {
+  position: fixed;
+  left: 50vw;
+  top: 15vh;
+  width: 50vw;
+  min-width: 1024px;
+  transform: translateX(-50%);
+  background: white;
+  border-radius: 10px;
+  z-index: 3;
+  box-shadow: 0 0 50px 1px rgba(0, 0, 0, 0.25);
+}
+#coinEditorMenu .topbar {
+  padding: 40px;
+}
+#coinEditorMenu .topbar #relationEditor {
+  width: calc(100% - 20px - 4px);
+  font-size: 2em;
+  height: calc(4em + 20px);
+  overflow: hidden;
+  border-style: none;
+  resize: none;
+  border: solid 1px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  padding: 10px;
+}
+#coinEditorMenu .topbar #relationEditor .id {
+  padding: 2px 9px;
+  margin: 5px;
+  background: rgba(252, 107, 0, 0.25);
+  border-radius: 10px;
+  text-transform: uppercase;
+}
+#coinEditorMenu .topbar #relationEditor .op {
+  margin: 5px;
+}
+#coinEditorMenu .topbar #relationEditor .op.p_open::before {
+  content: "(";
+  font-size: 1.25em;
+}
+#coinEditorMenu .topbar #relationEditor .op.p_close::before {
+  content: ")";
+  font-size: 1.25em;
+}
+#coinEditorMenu .topbar #relationEditor .op.and::before {
+  content: "AND";
+  font-size: 1em;
+}
+#coinEditorMenu .topbar #relationEditor .op.or::before {
+  content: "OR";
+  font-size: 1em;
+}
+#coinEditorMenu .bottombar {
+  padding: 40px;
+}
+#coinEditorMenu .bottombar #coincatalogue, #coinEditorMenu .bottombar #operatorcatalogue {
+  display: inline-flex;
+  padding: 10px;
+  border-radius: 20px;
+  border: solid 1px rgba(0, 0, 0, 0.25);
+  vertical-align: top;
+}
+#coinEditorMenu .bottombar #coincatalogue {
+  width: calc(75% - 20px - 4px);
+}
+#coinEditorMenu .bottombar #coincatalogue .coin-table .coin-thead .coin-tr {
+  display: flex;
+  flex-direction: row;
+}
+#coinEditorMenu .bottombar #coincatalogue .coin-table .coin-thead span:first-child {
+  display: flex;
+}
+#coinEditorMenu .bottombar #coincatalogue .coin-table .coin-thead span:last-child {
+  display: block;
+  flex: 0 0 10%;
+}
+#coinEditorMenu .bottombar #operatorcatalogue {
+  width: calc(25% - 20px - 4px);
+}
+#coinEditorMenu .bottombar #operatorcatalogue .calculator-grid {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 10px;
+}
+#coinEditorMenu .bottombar #operatorcatalogue .calculator-grid button {
+  flex: 1 1 calc(50% - 10px);
+  padding: 20px;
+  font-size: 18px;
+  border: 1px solid #e1e1e1;
+  border-radius: 5px;
+  cursor: pointer;
+  background: #9bddea;
+}
+#coinEditorMenu .bottombar #operatorcatalogue .calculator-grid button:hover {
+  background-color: #5ed3ea;
+}
+#coinEditorMenu .bottombar #operatorcatalogue .calculator-grid .clear {
+  flex-basis: 100%;
+}
+#coinEditorMenu .bottombar .button-group {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+#coinEditorMenu .bottombar .button-group button {
+  padding: 10px 20px;
+  border-radius: 7px;
+  font-weight: 400;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+}
+#coinEditorMenu .bottombar .button-group button.save {
+  background-color: #00913b;
+  color: white;
+}
+#coinEditorMenu .bottombar .button-group button.save:hover {
+  background-color: #006328;
+}
+#coinEditorMenu .bottombar .button-group button.close {
+  background-color: white;
+  color: #333333;
+  border: solid 1px #555555;
+}
+#coinEditorMenu .bottombar .button-group button.close:hover {
+  background-color: #E9E9E9;
+}
+
+#main {
+  display: flex;
+  width: 100vw;
+  max-width: 1920px;
+  max-height: 1080px;
+  overflow: hidden;
+  margin: 0 auto;
+  background: #ff9700;
+}
+#main #menu {
+  flex-grow: 1;
+  margin-top: 50px;
+  width: 24vw;
+  max-width: 426px;
+}
+#main #menu #logo {
+  display: block;
+  margin-left: 38px;
+}
+#main #menu #logo .logo-image {
+  display: inline-flex;
+  vertical-align: middle;
+  background: url("../../logo.png") center center/100% no-repeat;
+  width: 80px;
+  height: 80px;
+}
+#main #menu #logo .logo-label {
+  display: inline-flex;
+  vertical-align: middle;
+  font-family: "Verdana";
+  font-style: normal;
+  font-size: 22px;
+  line-height: 80px;
+  align-items: center;
+  text-align: center;
+  color: #FFFFFF;
+}
+#main #menu #nav {
+  margin-top: 60px;
+}
+#main #menu #nav .nav-item {
+  position: relative;
+  color: white;
+  height: 70px;
+  margin-bottom: 20px;
+  border-radius: 0 100px 100px 0;
+  max-width: 300px;
+  overflow: hidden;
+}
+#main #menu #nav .nav-item .nav-item-inner {
+  position: relative;
+  z-index: 2;
+  margin-left: 38px;
+}
+#main #menu #nav .nav-item .nav-item-inner .icon-outer, #main #menu #nav .nav-item .nav-item-inner .nav-text {
+  display: inline-flex;
+  transition: all 0.2s linear;
+}
+#main #menu #nav .nav-item .nav-item-inner .icon-outer {
+  width: 40px;
+  align-content: center;
+  vertical-align: middle;
+  color: #BF8F49;
+}
+#main #menu #nav .nav-item .nav-item-inner .icon-outer span {
+  font-size: 26px;
+  padding: 7px;
+  background: #856D4A;
+  border-radius: 7px;
+}
+#main #menu #nav .nav-item .nav-item-inner .nav-text {
+  font-size: 18px;
+  line-height: 20px;
+  padding: 25px 0 25px 20px;
+  align-content: center;
+  vertical-align: middle;
+  color: #9C753C;
+}
+#main #menu #nav .nav-item.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+  cursor: not-allowed;
+}
+#main #menu #nav .nav-item::before {
+  position: absolute;
+  z-index: 1;
+  content: "";
+  background: #6C4662;
+  display: block;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 5px;
+  opacity: 0;
+  transition: all 0.2s linear;
+}
+#main #menu #nav .nav-item:not(.active):hover .icon-outer, #main #menu #nav .nav-item:not(.active):hover .nav-text {
+  color: #FFC065;
+}
+#main #menu #nav .nav-item:not(.active):hover::before {
+  opacity: 1;
+  transform: scaleX(150);
+}
+#main #menu #nav .nav-item.active .icon-outer, #main #menu #nav .nav-item.active .nav-text {
+  color: white;
+}
+#main #menu #nav .nav-item.active::before {
+  opacity: 1;
+}
+#main #stage {
+  flex-grow: 3.42;
+  display: flex;
+  height: 100vh;
+  width: 76vw;
+}
+#main #stage #stageArea {
+  border-radius: 60px;
+  background: #FFE6CF;
+  margin: 20px 30px;
+  height: 100%;
+  max-height: 1040px;
+  overflow: hidden;
+  width: 100%;
+}
+#main #stage #stageArea #moveableStage {
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  height: 100%;
+  transition: transform 1s ease-in-out 0.2s;
+}
+#main #stage #stageArea #moveableStage[data-state=results] {
+  transform: translateY(calc(-100% + 25px));
+}
+#main #stage #stageArea #moveableStage[data-state=results] #resultBox #returnToQuery {
+  pointer-events: all;
+  opacity: 1;
+}
+#main #stage #stageArea #moveableStage[data-state=results] #searchBox, #main #stage #stageArea #moveableStage[data-state=results] #queryBox {
+  transform: translateY(-50%);
+}
+
+#main #stage #stageArea #moveableStage #searchBox {
+  background: #FFF5EB;
+  border-radius: 34px;
+  margin: 2.25% 1.125% 2.25% 2.25%; /* Change by Nico Lambert: margin value now in % not px anymore, change of margin*/
+  width: 15%; /* Change by Nico Lambert: change of width*/
+  height: 85%; /* Change by Nico Lambert: height value now in % not px anymore, change of height*/
+  flex: 1 1 auto;
+  padding: 2.25%; /* Update by Nico Lambert : padding value now in % not px anymore*/
+  position: relative;
+  transition: transform 1s ease-in-out;
+}
+#main #stage #stageArea #moveableStage #searchBox #searchType .search {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 30px;
+}
+#main #stage #stageArea #moveableStage #searchBox #searchType .search input[type=radio] {
+  display: none;
+}
+#main #stage #stageArea #moveableStage #searchBox #searchType .search input[type=radio]:checked + label {
+  font-weight: 600;
+  background: none;
+}
+#main #stage #stageArea #moveableStage #searchBox #searchType .search label {
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  padding: 10px;
+  border: solid 1px rgba(0, 0, 0, 0.25);
+  background: rgba(0, 0, 0, 0.2);
+}
+#main #stage #stageArea #moveableStage #searchBox #searchType .search label:first-of-type {
+  border-radius: 7px 0 0 7px;
+  border-right: none;
+}
+#main #stage #stageArea #moveableStage #searchBox #searchType .search label:last-of-type {
+  border-radius: 0 7px 7px 0;
+}
+#main #stage #stageArea #moveableStage #searchBox .coin-side h2 {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+#main #stage #stageArea #moveableStage #searchBox .coin-side#back {
+  margin-top: 1%; /* Update by Nico Lambert : margin value now in % not px anymore, reduce of margin */
+}
+#main #stage #stageArea #moveableStage #searchBox #headline {
+  display: block;
+  margin-bottom: 1%; /* Update by Nico Lambert : margin value now in % not px anymore, reduce of margin */
+  font-size: 26px;
+  color: #402B0B;
+  font-weight: 600;
+}
+#main #stage #stageArea #moveableStage #searchBox .textbox {
+  background: transparent;
+  font-size: 16px;
+  line-height: 16px;
+  border-style: none;
+  border: 1px solid rgb(0, 0, 0);
+  height: 6%; /* Update by Nico Lambert : height value now in % not px anymore, reduce of height */
+  border-radius: 7px;
+  margin-top: 0.5%; /* Update by Nico Lambert : added margin, value now in % not px anymore */
+  color: #787878;
+  padding: 15px 0px 15px 40px;
+  box-sizing: border-box;
+}
+#main #stage #stageArea #moveableStage #searchBox .textbox:focus {
+  outline: none;
+}
+#main #stage #stageArea #moveableStage #searchBox .totext {
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  width: 40px;
+  padding: 3.5% 0; /* Update by Nico Lambert : padding value now in % not px anymore*/
+  top: 0;
+  color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+#main #stage #stageArea #moveableStage #searchBox .search {
+  position: relative;
+}
+#main #stage #stageArea #moveableStage #searchBox .search input {
+  position: relative;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: fill-available;
+  height: 5vh; /* Update by Nico Lambert - to have a fix height for the input fields */
+  z-index: 1;
+}
+#main #stage #stageArea #moveableStage #searchBox .search .rec {
+  position: absolute;
+  background: white;
+  border-radius: 0 0 5px 5px;
+  z-index: 30; /* Update by Nico Lambert : higher z-index, so that recommendation list is always on top */
+  left: 40px;
+  top: 5vh; /* Update by Nico Lambert : added top to set rec list down*/
+  transform: translateX(-10px);
+}
+#main #stage #stageArea #moveableStage #searchBox .search .rec ul {
+  list-style-type: none;
+  display: none;
+  max-height: 280px; /* Update by Nico Lambert : reduce of max-height for recommendation list */
+  overflow-y: auto;
+  border: solid 1px rgb(0, 167, 255);
+  border-radius: 0 0 10px 10px;
+}
+#main #stage #stageArea #moveableStage #searchBox .search .rec ul li {
+  display: flex;
+  padding: 15px 10px;
+  min-width: 280px; /* Update by Nico Lambert : enlarge of min-width for recommendation list */
+  border-bottom: solid 1px rgb(0, 167, 255);
+}
+#main #stage #stageArea #moveableStage #searchBox .search .rec ul li .name {
+  flex: 2;
+}
+#main #stage #stageArea #moveableStage #searchBox .search .rec ul li .type {
+  display: flex;
+  text-transform: uppercase;
+  font-style: italic;
+  color: rgb(87, 176, 226);
+  padding-left: 15px;
+  align-items: center;
+  flex: 1;
+}
+#main #stage #stageArea #moveableStage #searchBox .search .rec ul li:hover {
+  background: rgba(87, 176, 226, 0.25);
+  cursor: pointer;
+}
+#main #stage #stageArea #moveableStage #searchBox .search .rec ul li:last-child {
+  border-bottom: none;
+}
+#main #stage #stageArea #moveableStage #searchBox #keywords {
+  position: relative;
+  margin-top: 2%; /* Update by Nico Lambert : margin value now in % not px anymore, reduce of margin */
+}
+#main #stage #stageArea #moveableStage #searchBox #keywords input {
+  position: relative;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: fill-available;
+  z-index: 1;
+}
+#main #stage #stageArea #moveableStage #searchBox #keywords button:active {
+  transform: scale(0.95);
+}
+
+/* Kommentar Anfang Update Steven Nowak Container zu Scroll Feld gemacht und span.keywords width geändert */
+#main #stage #stageArea #moveableStage #searchBox #keywords .keywordContainer {
+  border-radius: 7px; /* New by Nico Lambert: rounded corners */
+  position: relative;
+  width: 100%; 
+  height: 10%; 
+  overflow-y: auto; 
+  border: 1px solid #000000;
+  margin-top: 0.5%; /* Update by Nico Lambert: margin value now in % not px anymore, reduce of margin */
+}
+#main #stage #stageArea #moveableStage #searchBox #keywords .keywordContainer span.keyword {
+  position: relative;
+  color: #000000;
+  margin-right: 10px;
+  transition: all 0.1s ease-in-out;
+  display: inline-block;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: fill-available;
+  /*font-weight: bold;*/
+}
+/* Kommentar Ende Update Steven Nowak Container zu Scroll Feld gemacht und span.keywords width geändert */
+
+/* Kommentar Anfang Update Steven Nowak Visuals of Keywords in Scroll Feld Changed depending on data-negated*/
+#main #stage #stageArea #moveableStage #searchBox #keywords .keywordContainer span.keyword > span.label::before {
+  font-size: 22px;  
+  margin-right: 5px;
+  padding: 0 0 0 5px;
+  text-shadow:
+        0.03em 0 black,
+        0 0.03em black,
+        -0.03em 0 black,
+        0 -0.03em black,
+        -0.03em -0.03em black,
+        -0.03em 0.03em black,
+        0.03em -0.03em black,
+        0.03em 0.03em black;
+}
+#main #stage #stageArea #moveableStage #searchBox #keywords .keywordContainer span.keyword[data-negated=false] > span.label::before {
+  content: '+'; 
+  color: rgb(0, 255, 0);
+}
+#main #stage #stageArea #moveableStage #searchBox #keywords .keywordContainer span.keyword[data-negated=true] > span.label::before {
+  content: '-'; 
+  color: rgb(255, 0, 0); 
+}
+/* Kommentar Ende Update Steven Nowak Visuals of Keywords in Scroll Feld Changed depending on data-negated*/
+#main #stage #stageArea #moveableStage #searchBox #keywords .keywordContainer span.keyword:hover {
+  z-index: 20;
+}
+#main #stage #stageArea #moveableStage #searchBox #keywords .keywordContainer span.keyword .keyword-menu {
+  position: absolute;
+  width: 100%;
+  min-width: 100px;
+  background: white;
+}
+#main #stage #stageArea #moveableStage #searchBox #keywords .keywordContainer span.keyword .keyword-menu div {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  border: solid 1px rgba(0, 0, 0, 0.15);
+}
+#main #stage #stageArea #moveableStage #searchBox #keywords .keywordContainer span.keyword .keyword-menu div:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+#main #stage #stageArea #moveableStage #searchBox #keywords .keywordContainer span.keyword .keyword-menu div > span {
+  font-size: 20px;
+}
+#main #stage #stageArea #moveableStage #searchBox #keywords .keywordContainer span.keyword .keyword-menu div.delete {
+  background: rgba(255, 0, 0, 0.75);
+  color: white;
+}
+#main #stage #stageArea #moveableStage #searchBox #keywords .keywordContainer span.keyword .keyword-menu div.delete:hover {
+  background: rgb(255, 0, 0);
+}
+#main #stage #stageArea #moveableStage #searchBox #searchActions {
+  display: flex; /* Update by Nico Lambert: display flex to have the buttons next to each other */
+  gap: 2%; /* New by Nico Lambert: space between the buttons */
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: fill-available;
+  position: absolute;
+  bottom: 3.5%; /* Update by Nico Lambert : change of bottom value now in % not px anymore*/
+  left: 0;
+  padding-left: 30px; /* Update by Nico Lambert : padding change: now only left and right not for bottom as well */
+  padding-right: 30px; /* Update by Nico Lambert : padding change: now only left and right not for bottom as well */
+}
+/* Update Start Steven Nowak Background Color + Opacity Changed */
+#main #stage #stageArea #moveableStage #searchBox #searchActions button {
+  display: block;
+  width: 100%;
+  border-radius: 7px;
+  padding: 15px;
+  font-weight: 400;
+  font-size: 16px;
+  margin-top: 1.5%; /* Update by Nico Lambert : margin value now in % not px anymore, reduce of margin */
+  border: none;
+  background: none;
+  cursor: pointer;
+  opacity: 1.0;
+}
+/* Update Start Steven Nowak Background and Border Color Changed */
+#main #stage #stageArea #moveableStage #searchBox #searchActions button.addcoin {
+  background: #ff7300;
+  width:52% /* Update by Nico Lambert: change of width, to be able to have this button next to "Clear input" to save space */
+}
+#main #stage #stageArea #moveableStage #searchBox #searchActions button.addcoin:hover {
+  background: #cc5c00;
+}
+
+#main #stage #stageArea #moveableStage #searchBox #searchActions button.clearcoin {
+  border: solid 1px #ff7300;
+  width: 30% /* Update by Nico Lambert: change of width, to be able to have this button next to "Add Coin to query" to save space */
+}
+#main #stage #stageArea #moveableStage #searchBox #searchActions button.clearcoin:hover {
+  background: #cac4bc;
+}
+/* Update End Steven Nowak Background Color + Opacity Changed */
+#main #stage #stageArea #moveableStage #queryBox {
+  border-radius: 34px;
+  margin: 25px;
+  flex: 1 1 auto;
+  position: relative;
+  margin: 2.25% 2.25% 2.25% 1.125%; /* Change by Nico Lambert: margin value now in % not px anymore, change of margin*/
+  width: 50%; /* Change by Nico Lambert: change of width*/
+  height: 85%; /* Change by Nico Lambert: height value now in % not px anymore, change of height*/
+  padding: 30px;
+  background: #FFF5EB;
+  transition: transform 1s ease-in-out 0.15s;
+}
+#main #stage #stageArea #moveableStage #queryBox #headline {
+  display: block;
+  margin-bottom: 40px;
+  font-size: 26px;
+  color: #402B0B;
+  font-weight: 600;
+}
+#main #stage #stageArea #moveableStage #queryBox #coincatalogue {
+  width: 100%;
+  padding: 0;
+  border: 0;
+  height: 80%;
+}
+#main #stage #stageArea #moveableStage #queryBox #coincatalogue .coin-table .coin-thead .coin-tr {
+  display: flex;
+  flex-direction: row;
+}
+#main #stage #stageArea #moveableStage #queryBox #coincatalogue .coin-table .coin-thead span:last-child {
+  display: block;
+  flex: 0 0 10%;
+}
+#main #stage #stageArea #moveableStage #queryBox #coincatalogue .coin-table .coin-tbody {
+  overflow-y: scroll;
+}
+#main #stage #stageArea #moveableStage #queryBox #coincatalogue .coin-table .coin-tbody .coin-tr-main {
+  cursor: default;
+}
+#main #stage #stageArea #moveableStage #queryBox #searchActions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: fill-available;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 30px;
+}
+/* Update Start Steven Colors and Oppacity Changed */
+#main #stage #stageArea #moveableStage #queryBox #searchActions button {
+  display: inline-block;
+  width: 100%;
+  border-radius: 7px;
+  padding: 15px;
+  font-weight: 400;
+  font-size: 16px;
+  margin-top: 10px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  opacity: 1.0;
+}
+
+
+#main #stage #stageArea #moveableStage #queryBox #searchActions button.clearcoins {
+  flex-basis: 18%;
+  border: solid 2px #ff7300;
+}
+#main #stage #stageArea #moveableStage #queryBox #searchActions button.advancededit {
+  flex-basis: 30%;
+  background: #816e4c;
+  color: white;
+}
+#main #stage #stageArea #moveableStage #queryBox #searchActions button.searchcoin {
+  flex-basis: 25%; /* Updated by Nico Lambert: Now 25% instead of 50%, because we splited the search button into type search and coin search */
+  background: #ff7300;
+}
+#main #stage #stageArea #moveableStage #queryBox #searchActions button.clearcoins:hover {
+  background: #cac4bc;
+}
+#main #stage #stageArea #moveableStage #queryBox #searchActions button.advancededit:hover {
+  background: #534731;
+}
+#main #stage #stageArea #moveableStage #queryBox #searchActions button.searchcoin:hover {
+  background: #cc5c00;
+}
+/* Update End Steven Colors and Oppacity Changed */
+
+#main #stage #stageArea #moveableStage #queryBox #searchActions button[disabled] {
+  opacity: 0.9;
+  cursor: not-allowed;
+}
+#main #stage #stageArea #moveableStage #resultBox {
+  background: #FFF5EB;
+  border-radius: 34px;
+  flex: 1 1 auto;
+  padding: 30px;
+  position: relative;
+  width: 100%;
+  margin: 2.25%; /* Change by Nico Lambert: margin value now in % not px anymore, change of margin*/
+  width: 15%; /* Change by Nico Lambert: change of width*/
+  height: 85%; /* Change by Nico Lambert: height value now in % not px anymore, change of height*/
+  overflow-y: scroll;
+}
+#main #stage #stageArea #moveableStage #resultBox #returnToQuery {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 30;
+  pointer-events: none;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+#main #stage #stageArea #moveableStage #resultBox #returnToQuery:hover {
+  transform: translateX(-50%) translateY(-10px);
+}
+#main #stage #stageArea #moveableStage #resultBox #returnToQuery > span {
+  background: #FFFFFF;
+  padding: 10px 25px;
+  border: solid 2px rgba(0, 0, 0, 0.15);
+  border-radius: 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+#main #stage #stageArea #moveableStage #resultBox #headline {
+  position: relative;
+  font-size: 26px;
+  color: white;
+  font-weight: 600;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background: #ff9700;
+  border-radius: 5px;
+}
+#main #stage #stageArea #moveableStage #resultBox #headline > span {
+  display: block;
+}
+#main #stage #stageArea #moveableStage #resultBox #headline #resultActions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10%;
+  margin-top: 10px;
+  width: 100%;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.15);
+}
+#main #stage #stageArea #moveableStage #resultBox #headline #resultActions button {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: 5px;
+  background: white;
+  cursor: pointer;
+  border: solid 1px rgba(0, 0, 0, 0.5);
+}
+#main #stage #stageArea #moveableStage #resultBox #headline #resultActions label {
+  margin-right: 10px;
+  font-size: 14px;
+  font-weight: normal;
+  color: #FFFFFF;
+}
+#main #stage #stageArea #moveableStage #resultBox #headline #resultActions .sort-dropdown, #main #stage #stageArea #moveableStage #resultBox #headline #resultActions .group-dropdown {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: white;
+  border: solid 1px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+}
+#main #stage #stageArea #moveableStage #resultBox #headline #resultActions .sort-dropdown:after, #main #stage #stageArea #moveableStage #resultBox #headline #resultActions .group-dropdown:after {
+  content: "";
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border: 5px solid transparent;
+  border-color: #333 transparent transparent transparent;
+}
+#main #stage #stageArea #moveableStage #resultBox #headline #resultActions select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: transparent;
+  border: none;
+  padding: 5px 30px 5px 10px;
+  margin: 0;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+#main #stage #stageArea #moveableStage #resultBox #headline #resultActions select:focus {
+  outline: none;
+}
+#main #stage #stageArea #moveableStage #resultBox #headline #resultActions select::-ms-expand {
+  display: none;
+}
+#main #stage #stageArea #moveableStage #resultBox #resultContainer #loadingSymbol {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50%;
+  width: 100%;
+  color: #FFA800;
+}
+#main #stage #stageArea #moveableStage #resultBox #resultContainer #loadingSymbol > span {
+  font-size: 5em;
+  animation: rotate 2s linear infinite;
+}
+#main #stage #stageArea #moveableStage #resultBox #resultContainer .category {
+  font-size: 20px;
+  width: 100%;
+  display: block;
+  margin: 30px 0 10px;
+  border: solid 2px rgba(0, 0, 0, 0.4);
+  border-radius: 12px;
+}
+#main #stage #stageArea #moveableStage #resultBox #resultContainer .category > span {
+  display: block;
+  padding: 10px 25px;
+  background: rgba(0, 0, 0, 0.4);
+  color: white;
+  border-radius: 10px 10px 0 0;
+}
+#main #stage #stageArea #moveableStage #resultBox #resultContainer .category-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  justify-content: center;
+  padding: 25px;
+}
+#main #stage #stageArea #moveableStage #resultBox #resultContainer .category-container .result-item {
+  display: flex;
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  border: solid 1px rgba(0, 0, 0, 0.2);
+  flex-direction: column;
+  cursor: pointer;
+  background: #ffc531;
+}
+#main #stage #stageArea #moveableStage #resultBox #resultContainer .category-container .result-item-top {
+  position: relative;
+  background: white;
+  height: 130px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+#main #stage #stageArea #moveableStage #resultBox #resultContainer .category-container .result-item-top img {
+  max-width: 100%;
+  max-height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+#main #stage #stageArea #moveableStage #resultBox #resultContainer .category-container .result-item-top-id {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding-right: 10px;
+  background: white;
+  font-size: 20px;
+}
+#main #stage #stageArea #moveableStage #resultBox #resultContainer .category-container .result-item-bottom {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+#main #stage #stageArea #moveableStage #resultBox #resultContainer .category-container .result-item-bottom-location {
+  font-size: 20px;
+  padding: 10px 20px;
+  background: rgba(255, 255, 255, 0.5);
+}
+#main #stage #stageArea #moveableStage #resultBox #resultContainer .category-container .result-item-bottom-location .location {
+  font-weight: 600;
+}
+#main #stage #stageArea #moveableStage #resultBox #resultContainer .category-container .result-item-bottom-location .region {
+  font-size: 18px;
+  padding-left: 10px;
+}
+#main #stage #stageArea #moveableStage #resultBox #resultContainer .category-container .result-item-bottom-extra {
+  font-size: 16px;
+  padding: 5px 20px;
+  background: rgba(255, 255, 255, 0.5);
+}
+#main #stage #stageArea #moveableStage #resultBox #resultContainer .category-container .result-item-bottom-description {
+  padding: 10px 20px;
+  border-top: solid 2px rgba(0, 0, 0, 0.25);
+  font-size: 16px;
+}
+#main #stage #stageArea #moveableStage #resultBox #resultContainer .category-container .result-item-bottom-description p:first-of-type {
+  margin-bottom: 10px;
+}
+#main #stage #stageArea #moveableStage #resultBox #resultContainer .category-container .result-item-bottom-description p span {
+  font-weight: 700;
+}
+#main #stage #stageArea #moveableStage #resultBox #resultContainer .category-container .result-item.TypeSeriesItem {
+  background: #74ceff;
+}
+#main #stage #stageArea #moveableStage #resultBox #resultContainer .category-container .result-item.TypeSeriesItem .result-item-top-id {
+  display: none;
+}
+#main #stage #stageArea #moveableStage #resultBox #paginationControls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  font-size: 16px;
+}
+#main #stage #stageArea #moveableStage #resultBox #paginationControls button {
+  padding: 5px 10px;
+  margin: 0 10px;
+  background-color: #ff9700;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s;
+  font-size: 16px;
+}
+#main #stage #stageArea #moveableStage #resultBox #paginationControls button:hover {
+  background-color: #d07d00;
+}
+#main #stage #stageArea #moveableStage #resultBox #paginationControls button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+#main #stage #stageArea #moveableStage #resultBox #paginationControls #pageInfo {
+  margin: 0 15px;
+}/*# sourceMappingURL=style.css.map */
+
+
+/*
+------------------------------------------------------------------- (START) NEW by Nico Lambert -------------------------------------------------------------------------------
+*/
+
+#resultbox {
+  display: none;
+}
+
+
+
+/* css styles for new added buttons and fields */
+
+.simpleHierachyButtons{
+  position: absolute;
+  top:10.5%;
+  left: 77%;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  background: transparent;
+  height: 90%;
+  width: 40px;
+  align-items: center;
+  vertical-align: middle;
+}
+
+.absoluteHierachyButtons{
+  position: absolute;
+  top:10.5%;
+  left: 83.5%;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  background: transparent;
+  height: 90%;
+  width: 40px;
+  align-items: center;
+  vertical-align: middle;
+}
+
+.extraHierachyButtons{
+  position: absolute;
+  top:10.5%;
+  left: 90%;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  background: transparent;
+  height: 90%;
+  width: 40px;
+  align-items: center;
+  vertical-align: middle;
+}
+
+.otherHierachyButtons{
+  position: absolute;
+  top:10.5%;
+  left: 86%;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  background: transparent;
+  height: 91%;
+  width: 48px;
+  align-items: center;
+  vertical-align: middle;
+}
+
+.otherHierachyButtons button{
+  background: #ff7300;
+  height: 85%;
+  width: 40px;
+  border: transparent;
+  border-radius: 5px;
+}
+
+.otherHierachyButtons button:hover{
+  background: #cc5c00
+}
+
+.HierachyButtons button{
+  background: #ff7300;
+  height: 40%;
+  width: 17px;
+  border: transparent;
+  border-radius: 5px;
+}
+
+.HierachyButtons button:hover{
+  background: #cc5c00
+}
+
+.HierachyButtons button[data-action*="Generalise"]{
+  margin-bottom: 5px;
+}
+
+.HierachyButtons button[data-action*="similar"]{
+  margin-bottom: 5px;
+}
+
+.listPredicates{
+  position: absolute;
+  top:10.5%;
+  left: 86%;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  background: transparent;
+  height: 90%;
+  width: 48px;
+  align-items: center;
+  vertical-align: middle;
+}
+
+.listPredicates button{
+  background: #ff7300;
+  height: 90%;
+  width: 40px;
+  border: transparent;
+  border-radius: 5px;
+
+}
+
+.listPredicates button:hover{
+  background: #cc5c00
+}
+
+.fa-pencil{
+  color: rgb(255, 255, 255);
+}
+
+
+.hierarchySearch{
+  background: #FFF5EB;
+  display: none;
+  z-index: 5;;
+  position: relative;
+  
+}
+
+
+/* copied from .search */
+#main #stage #stageArea #moveableStage #searchBox #searchType .hierarchySearch {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 30px;
+}
+#main #stage #stageArea #moveableStage #searchBox #searchType .hierarchySearch input[type=radio] {
+  display: none;
+}
+#main #stage #stageArea #moveableStage #searchBox #searchType .hierarchySearch input[type=radio]:checked + label {
+  font-weight: 600;
+  background: none;
+}
+#main #stage #stageArea #moveableStage #searchBox #searchType .hierarchySearch label {
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  padding: 10px;
+  border: solid 1px rgba(0, 0, 0, 0.25);
+  background: rgba(0, 0, 0, 0.2);
+}
+#main #stage #stageArea #moveableStage #searchBox #searchType .hierarchySearch label:first-of-type {
+  border-radius: 7px 0 0 7px;
+  border-right: none;
+}
+#main #stage #stageArea #moveableStage #searchBox #searchType .hierarchySearch label:last-of-type {
+  border-radius: 0 7px 7px 0;
+}
+
+#main #stage #stageArea #moveableStage #searchBox .hierarchySearch {
+  position: relative;
+}
+
+#main #stage #stageArea #moveableStage #searchBox .hierarchySearch input {
+  position: relative;
+  width: -webkit-fill-available;
+  width: -moz-available;
+  width: fill-available;
+  height: 5vh; /* Update by Nico Lambert - to have a fix height for the input fields */
+  z-index: 3;
+  background-color: #EBF3FD;
+}
+#main #stage #stageArea #moveableStage #searchBox .hierarchySearch .rec {
+  position: absolute;
+  background: white;
+  border-radius: 0 0 5px 5px;
+  z-index: 2; 
+  left: 40px;
+  top: 5vh; /* Update by Nico Lambert : added top to set rec list down*/
+  transform: translateX(-10px);
+}
+#main #stage #stageArea #moveableStage #searchBox .hierarchySearch .rec ul {
+  list-style-type: none;
+  display: none;
+  max-height: 280px; 
+  overflow-y: auto;
+  border: solid 1px rgb(0, 167, 255);
+  border-radius: 0 0 10px 10px;
+}
+#main #stage #stageArea #moveableStage #searchBox .hierarchySearch .rec ul li {
+  display: flex;
+  padding: 15px 10px;
+  min-width: 280px; 
+  border-bottom: solid 1px rgb(0, 167, 255);
+}
+#main #stage #stageArea #moveableStage #searchBox .hierarchySearch .rec ul li .name {
+  flex: 2;
+}
+#main #stage #stageArea #moveableStage #searchBox .hierarchySearch .rec ul li .type {
+  display: flex;
+  text-transform: uppercase;
+  font-style: italic;
+  color: rgb(87, 176, 226);
+  padding-left: 15px;
+  align-items: center;
+  flex: 1;
+}
+#main #stage #stageArea #moveableStage #searchBox .hierarchySearch .rec ul li:hover {
+  background: rgba(87, 176, 226, 0.25);
+  cursor: pointer;
+}
+#main #stage #stageArea #moveableStage #searchBox .hierarchySearch .rec ul li:last-child {
+  border-bottom: none;
+}
+
+
+/*
+--------------------------------------------------------------------- (END) NEW by Nico Lambert -----------------------------------------------------------------------------
+*/
+
+/*
+------------------------------------------------------------------- START Steven Nowak ---------------------------------------------------
+*/
+.addKeywordButtons{
+  position: absolute;
+  top: 5%; 
+  left: 71%;
+  z-index: 2;
+  display: flex;
+  background: transparent;
+  flex-direction: column;
+  height: 90%;
+  width: 85px;
+  align-items: center;
+  vertical-align: middle;
+}
+
+.addKeywordButtons button{
+  height: 15%;
+  width: 21%;
+  border: transparent;
+  border-radius: 5px;
+}
+
+.addKeywordButtons button[data-action="addKeyword"] {
+  background: #ff7300;
+  margin-bottom: 4px;
+}
+
+.addKeywordButtons button[data-action="addKeyword"]:hover {
+  background: #cc5c00;
+}
+
+
+.addKeywordButtons button[data-action="negateKeyword"] {
+  background: #ff7300;
+}
+
+.addKeywordButtons button[data-action="negateKeyword"]:hover {
+  background: #cc5c00;
+}
+
+.keywordButtons button[data-action="editKeyword"] {
+  bottom: 70%; 
+}
+
+.keywordButtons button[data-action="resetKeyword"] {
+  bottom: 70%; 
+}
+
+.clearKeywordButton{
+  position: absolute;
+  top : 5%; 
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  background: transparent;
+  height: 91%;
+  width: 40px;
+  align-items: center;
+  vertical-align: middle;
+  left: 87%;
+}
+
+.clearKeywordButton button{
+  background: #ff7300;
+  height: 32%;
+  width: 40px;
+  border: transparent;
+  border-radius: 5px;
+}
+
+
+.clearKeywordButton button:hover{
+  background: #cc5c00
+}
+
+.keyword button{
+  position: absolute;
+  background: #ff7300;
+  height: 57%;
+  width: 6%;
+  margin-top: 2%;
+  left: 95%;
+  border: transparent;
+  border-radius: 5px;
+  z-index: 3;
+
+}
+
+.keyword button:hover{
+  background: #cc5c00
+}
+
+
+.fa-trash{
+  color: rgb(0, 0, 0);
+}
+
+.fa-pencil{
+  color: rgb(0, 0, 0);
+}
+
+
+/*
+--------------------------------------------------------------------- END Steven Nowak ---------------------------------------------------
+*/
+

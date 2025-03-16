@@ -1,0 +1,662 @@
+{% load static %}
+<!-- Author: Danilo Pantic -->
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>ICONOGRAPHIC SEARCH</title>
+    <link rel="icon" type="image/x-icon" href="{% static 'favicon.ico' %}" />
+
+    <link rel="stylesheet" href="{% static 'styles/fonts/OpenSans.css' %}" />
+    <link
+      rel="stylesheet"
+      href="{% static 'styles/fonts/MaterialSymbolsOutlined.css' %}"
+    />
+
+    <link rel="stylesheet" href="{% static 'styles/introjs/introjs.css' %}" />
+    <link
+      rel="stylesheet"
+      href="{% static 'styles/codeMirror/codemirror.min.css' %}"
+    />
+
+    <script src="{% static 'js/fontAwesome/all.min.js' %}"></script>
+    <script src="{% static 'js/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'js/codeMirror/codemirror.min.js' %}"></script>
+    <script src="{% static 'js/codeMirror/sparql.min.js' %}"></script>
+    <script src="{% static 'js/sparqlFormatter/main.js' %}"></script>
+    <script src="{% static 'js/introjs/intro.js' %}"></script>
+
+    {% block mainjs %}
+    <script
+      type="text/javascript"
+      src="{% static 'js/main/main.js' %}"
+    ></script>
+    {% endblock %} {% block maincss %}
+    <link rel="stylesheet" href="{% static 'styles/main/style.css' %}" />
+    {% endblock %}
+  </head>
+
+  <!-- ###########################################################  General changes by Steven Nowak and Nico Lambert  #########################################################
+  - we changed: each triple elment has now a different search field
+    - before for obverse / reverse was only one search field per side now there is one search field per triple element (3 per side)
+  - we addded buttons for hierarchy search
+  - we added a second search field for each subject and object field - for the hierarchy search
+  - we replaced "Tutorial" with our "User manual"
+  - we added tooltips for hierachy and keyword buttons
+  - we added data- attributes in some places where it was necessary
+  -->
+
+  <!-- ###########################################################  General changes by Steven Nowak ###########################################################################
+  - editKeyword, negateKeyword, clearKeyword Button added and addKeyword Updated
+  - added, that keywords now have a maximum of 16 characters because of the width of the search field
+  -->
+
+  <!-- ###########################################################  General changes by  Nico Lambert  #########################################################################
+  - change id="search" to class="search" , because id="search" was used for more than one div and for our changes it was dificult to work with an
+    id which isn't unique. It's easier to work with class="search" so we can each of the divs per .getelementById().
+  - change of the position of the search type buttons - search type and search button were seperated (you choosed a search type first and then click on the search button) , now you
+    click on the type of search you want (coin search , type search) and then you dont have to click on a seperate search button 
+  - added attribute data-searchtype
+  -->
+  
+
+  <body>  
+    <div id="relationMenu" class="hidden">
+      <div class="topbar">
+        <h2>
+          Edit relations between coins:
+        </h2>
+        <div id="relationEditorWrapper">
+          <div id="relationEditor" contenteditable="true"></div>
+          <div id="catalogueWrapper">
+            <div id="coincatalogue">
+              <div class="coin-table">
+                <div class="coin-thead">
+                  <div class="coin-tr">
+                    <span>ID</span>
+                    <span>Front</span>
+                    <span>Back</span>
+                  </div>
+                </div>
+                <div class="coin-tbody"></div>
+              </div>
+            </div>
+            <div id="operatorcatalogue">
+              <div class="calculator-grid">
+                <button data-op="p_open">(</button>
+                <button data-op="p_close">)</button>
+                <button data-op="and">AND</button>
+                <button data-op="or">OR</button>
+                <button data-op="not">NOT</button>
+                <button class="clear">Clear</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bottombar">
+        <div id="sparqleditor">
+          <h2>
+            SPARQL-Query:
+
+          </h2>
+          <div class="editortabs">
+            <button class="" data-action="clearSPARQLEditor">Clear</button>
+            <button class="" data-action="beautifySPARQLeditor">
+              Beautify
+            </button>
+          </div>
+          <textarea
+            id="sparqlQuery"
+            class="editor"
+            placeholder="Generated SPARQL query will appear here..."
+          ></textarea>
+        </div>
+        <div class="button-group">
+          <button id="saveButton" class="save">Save</button>
+          <button id="closeButton" class="close">Close</button>
+        </div>
+      </div>
+    </div>
+    <div id="main">
+      <div id="menu">
+        <div id="logo">
+          <div class="logo-image"></div>
+          <div class="logo-label">
+            <span>ICONOGRAPHIC SEARCH</span>
+          </div>
+        </div>
+        <div id="nav">
+          <div class="nav-item active">
+            <a href="">
+              <div class="nav-item-inner">
+                <div class="icon-outer">
+                  <span class="material-symbols-outlined">
+                    quick_reference_all
+                  </span>
+                </div>
+                <span class="nav-text">Search</span>
+              </div>
+            </a>
+          </div>
+          <div class="nav-item disabled">
+            <a href="/history">
+              <div class="nav-item-inner">
+                <div class="icon-outer">
+                  <span class="material-symbols-outlined"> history </span>
+                </div>
+                <span class="nav-text">History</span>
+              </div>
+            </a>
+          </div>
+          <div class="nav-item">
+            <a href="#userManual">
+              <div class="nav-item-inner">
+                <div class="icon-outer">
+                  <span class="material-symbols-outlined"> menu_book </span>
+                </div>
+                <span class="nav-text">User manual</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div id="stage">
+        <div id="stageArea">
+          <div id="moveableStage" data-state="query">
+            <div id="searchBox">
+              <div id="headline">
+                <span>Search Engine
+                  <span
+                    class="material-symbols-outlined"
+                    data-tooltip="Describe the Image of your coins with the help of filtered Recommandations."
+                    >info</span
+                  >
+                </span>
+              </div>
+              <div id="front" class="coin-side" data-side="obverse">
+                <h2>
+                  Obverse
+                  <span
+                    class="material-symbols-outlined"
+                    data-tooltip="Describe the obverse of your coins. To get informations about an obverse button, hover at least a second above it."
+                    >info</span
+                  >
+                </h2>
+                <div class="search" id="standardSearch-obverse-subject">
+                  <input
+                    type="text"
+                    class="textbox"
+                    name="q"
+                    placeholder="Subject:"
+                    autocomplete="off"
+                    data-role="coin-description-subject"
+                    data-side="obverse"
+                    data-searchtype="standard"
+                  />
+                  <span class="material-symbols-outlined totext"> search </span>
+                  <div class=" tagContainer "></div>
+                  <div class="HierachyButtons"> 
+                    <div class="simpleHierachyButtons"> 
+                      <button disabled data-action="simpleGeneraliseSubject" data-side="obverse" data-tooltipButton="Lists all viable direct generalisations of current subject for obverse">
+                        <i class="fa-solid fa-angle-up"></i>
+                      </button>
+                      <button disabled data-action="simpleSpecialiseSubject" data-side="obverse" data-tooltipButton="Lists all viable direct specialisation of current subject for obverse">
+                        <i class="fa-solid fa-angle-down"></i>
+                      </button>
+                    </div>
+                    <div class="absoluteHierachyButtons"> 
+                      <button disabled data-action="absoluteGeneraliseSubject" data-side="obverse" data-tooltipButton="Lists all viable absolute generalisations of current subject for obverse">
+                        <i class="fa-solid fa-arrows-up-to-line"></i>
+                      </button>
+                      <button disabled data-action="absoluteSpecialiseSubject" data-side="obverse" data-tooltipButton="Lists all viable absolute specialisation of current subject for obverse">
+                        <i class="fa-solid fa-arrows-down-to-line"></i>
+                      </button>                     
+                    </div>
+                    <div class="extraHierachyButtons"> 
+                      <button disabled data-action="similarSubject" data-side="obverse" data-tooltipButton="Lists all viable hierarchical siblings of current subject for obverse">
+                        <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                      </button>
+                      <button data-action="listAllSubj" data-side="obverse" data-tooltipButton="Lists all viable subjects for obverse of current coin description">
+                        <i class="fa-solid fa-list" style="font-size: 1.1em;"></i>
+                      </button>
+                    </div>
+                  </div>   
+                  <div class="rec">
+                    <ul></ul>
+                  </div>
+                </div>
+                <div class = "hierarchySearch" id="hierarchySearch-obverse-subject">
+                  <input
+                    type="text"
+                    class="textbox"
+                    name="q"
+                    placeholder="Subject:"
+                    autocomplete="off"
+                    data-role="coin-description-subject"
+                    data-side="obverse"
+                    data-searchtype="hierarchy"
+                  />
+                  <span class="material-symbols-outlined totext"> search </span>
+                  <div class=" tagContainer "></div>
+                  <div class="otherHierachyButtons"> 
+                    <button data-action="backToStandardSearch" data-side="obverse" data-role="coin-description-subject">
+                      <i class="fa-solid fa-rotate-left" style="font-size: 1.6em;"></i>
+                    </button>
+                  </div>
+                  <div class="rec">
+                    <ul></ul>
+                  </div>
+                </div>
+                <div class="search" id="standardSearch-obverse-predicate">
+                  <input
+                    type="text"
+                    class="textbox"
+                    name="q"
+                    placeholder="Predicate:"
+                    autocomplete="off"
+                    data-role="coin-description-predicate"
+                    data-side="obverse"
+                    data-searchtype="standard"
+                  />
+                  <span class="material-symbols-outlined totext"> search </span>
+                  <div class="tagContainer"></div>
+                  <div class="listPredicates"> 
+                    <button data-action="listAllPredicates" data-side="obverse" data-tooltipButton="Lists all viable predicates for obverse of current coin description">
+                      <i class="fa-solid fa-list" style="font-size: 1.6em;"></i>
+                    </button>
+                  </div>
+                  <div class="rec">
+                    <ul></ul>
+                  </div>
+                </div>
+                <div class="search" id="standardSearch-obverse-object">
+                  <input
+                    type="text"
+                    class="textbox"
+                    name="q"
+                    placeholder="Object:"
+                    autocomplete="off"
+                    data-role="coin-description-object"
+                    data-side="obverse"
+                    data-searchtype="standard"
+                  />
+                  <span class="material-symbols-outlined totext"> search </span>
+                  <div class="tagContainer"></div>
+                  <div class="HierachyButtons"> 
+                    <div class="simpleHierachyButtons"> 
+                      <button disabled data-action="simpleGeneraliseObject" data-side="obverse" data-tooltipButton="Lists all viable direct generalisations of current object for obverse">
+                        <i class="fa-solid fa-angle-up"></i>
+                      </button>
+                      <button disabled data-action="simpleSpecialiseObject" data-side="obverse" data-tooltipButton="Lists all viable direct specialisation of current object for obverse">
+                        <i class="fa-solid fa-angle-down"></i>
+                      </button>
+                    </div>
+                    <div class="absoluteHierachyButtons"> 
+                      <button disabled data-action="absoluteGeneraliseObject" data-side="obverse" data-tooltipButton="Lists all viable absolute generalisations of current object for obverse">
+                        <i class="fa-solid fa-arrows-up-to-line"></i>
+                      </button>
+                      <button disabled data-action="absoluteSpecialiseObject" data-side="obverse" data-tooltipButton="Lists all viable absolute specialisation of current object for obverse">
+                        <i class="fa-solid fa-arrows-down-to-line"></i>
+                      </button>
+                    </div>
+                    <div class="extraHierachyButtons"> 
+                      <button disabled data-action="similarObject" data-side="obverse" data-tooltipButton="Lists all viable hierarchical siblings of current object for obverse">
+                        <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                      </button>
+                      <button data-action="listAllObj" data-side="obverse" data-tooltipButton="Lists all viable objects for obverse of current coin description">
+                        <i class="fa-solid fa-list" style="font-size: 1.1em;"></i>
+                      </button>
+                    </div>
+                  </div>  
+                  <div class="rec">
+                    <ul></ul>
+                  </div>
+                </div>
+                <div class = "hierarchySearch" id="hierarchySearch-obverse-object">
+                  <input
+                    type="text"
+                    class="textbox"
+                    name="q"
+                    placeholder="Object:"
+                    autocomplete="off"
+                    data-role="coin-description-object"
+                    data-side="obverse"
+                    data-searchtype="hierarchy"
+                  />
+                  <span class="material-symbols-outlined totext"> search </span>
+                  <div class=" tagContainer "></div>
+                  <div class="otherHierachyButtons"> 
+                    <button data-action="backToStandardSearch" data-side="obverse" data-role="coin-description-object">
+                      <i class="fa-solid fa-rotate-left" style="font-size: 1.6em;"></i>
+                    </button>
+                  </div>
+                  <div class="rec">
+                    <ul></ul>
+                  </div>
+                </div>
+                <div id="keywords">
+                  <input
+                    type="text"
+                    class="textbox"
+                    placeholder="Keywords"
+                    data-role="coin-keyword"
+                    maxlength="16"
+                  />
+                  <span class="material-symbols-outlined totext"> label </span>
+                  <div class="keywordContainer"></div>
+                  <div class="addKeywordButtons"> 
+                    <button data-action="addKeyword" data-tooltipButton="Adds keyword that needs to be in obverse of coin description">
+                      <i class="fa-solid fa-plus"></i>
+                    </button>
+                    <button data-action="negateKeyword" data-tooltipButton="Adds keyword that is not allowed to be in obverse of coin description">
+                      <i class="fa-solid fa-minus"></i>
+                    </button>
+                  </div>  
+                  <div class="clearKeywordButton"> 
+                    <button data-action="clearKeyword">
+                      <i class="fa-solid fa-trash" style="font-size: 1.6em;"></i>
+                    </button>
+                  </div>  
+                </div>
+              </div>
+              <div id="back" class="coin-side" data-side="reverse">
+                <h2>
+                  Reverse
+                  <span
+                    class="material-symbols-outlined"
+                    data-tooltip="Describe the Reverse of your coins. To get informations about a reverse button, hover at least a second above it.""
+                    >info</span
+                  >
+                </h2>
+                <div class="search" id="standardSearch-reverse-subject">
+                  <input
+                    type="text"
+                    class="textbox"
+                    name="q"
+                    placeholder="Subject:"
+                    autocomplete="off"
+                    data-role="coin-description-subject"
+                    data-side="reverse"
+                    data-searchtype="standard"
+                  />
+                  <span class="material-symbols-outlined totext"> search </span>
+                  <div class="tagContainer"></div>
+                  <div class="HierachyButtons"> 
+                    <div class="simpleHierachyButtons"> 
+                      <button disabled data-action="simpleGeneraliseSubject" data-side="reverse" data-tooltipButton="Lists all viable direct generalisations of current subject for reverse">
+                        <i class="fa-solid fa-angle-up"></i>
+                      </button>
+                      <button disabled data-action="simpleSpecialiseSubject" data-side="reverse" data-tooltipButton="Lists all viable direct specialisation of current subject for reverse">
+                        <i class="fa-solid fa-angle-down"></i>
+                      </button>
+                    </div>
+                    <div class="absoluteHierachyButtons"> 
+                      <button disabled data-action="absoluteGeneraliseSubject" data-side="reverse" data-tooltipButton="Lists all viable absolute generalisations of current subject for reverse">
+                        <i class="fa-solid fa-arrows-up-to-line"></i>
+                      </button>
+                      <button disabled data-action="absoluteSpecialiseSubject" data-side="reverse" data-tooltipButton="Lists all viable absolute specialisation of current subject for reverse">
+                        <i class="fa-solid fa-arrows-down-to-line"></i>
+                      </button>
+                    </div>
+                    <div class="extraHierachyButtons"> 
+                      <button disabled data-action="similarSubject" data-side="reverse" data-tooltipButton="Lists all viable hierarchical siblings of current subject for reverse">
+                        <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                      </button>
+                      <button data-action="listAllSubj" data-side="reverse" data-tooltipButton="Lists all viable subjects for reverse of current coin description">
+                        <i class="fa-solid fa-list" style="font-size: 1.1em;"></i>
+                        
+                      </button>
+                    </div>
+                  </div>
+                  <div class="rec">
+                    <ul></ul>
+                  </div>
+                </div>
+                <div class = "hierarchySearch" id="hierarchySearch-reverse-subject">
+                  <input
+                    type="text"
+                    class="textbox"
+                    name="q"
+                    placeholder="Subject-Test:"
+                    autocomplete="off"
+                    data-role="coin-description-subject"
+                    data-side="reverse"
+                    data-searchtype="hierarchy"
+                  />
+                  <span class="material-symbols-outlined totext"> search </span>
+                  <div class=" tagContainer "></div>
+                  <div class="otherHierachyButtons"> 
+                    <button data-action="backToStandardSearch" data-side="reverse" data-role="coin-description-subject">
+                      <i class="fa-solid fa-rotate-left" style="font-size: 1.6em;"></i>
+                    </button>
+                  </div>
+                  <div class="rec">
+                    <ul></ul>
+                  </div>
+                </div>
+                <div class="search" id="standardSearch-reverse-predicate">
+                  <input
+                    type="text"
+                    class="textbox"
+                    name="q"
+                    placeholder="Predicate:"
+                    autocomplete="off"
+                    data-role="coin-description-predicate"
+                    data-side="reverse"
+                    data-searchtype="standard" 
+                    
+                  />
+                  <span class="material-symbols-outlined totext"> search </span>
+                  <div class="tagContainer"></div>
+                  <div class="listPredicates"> 
+                    <button data-action="listAllPredicates" data-side="reverse" data-tooltipButton="Lists all viable predicates for reverse of current coin description">
+                      <i class="fa-solid fa-list" style="font-size: 1.6em;"></i>
+                    </button>
+                  </div>
+                  <div class="rec">
+                    <ul></ul>
+                  </div>
+                </div>
+                <div class="search" id="standardSearch-reverse-object">
+                  <input
+                    type="text"
+                    class="textbox"
+                    name="q"
+                    placeholder="Object:"
+                    autocomplete="off"
+                    data-role="coin-description-object"
+                    data-side="reverse"
+                    data-searchtype="standard" 
+                  />
+                  <span class="material-symbols-outlined totext"> search </span>
+                  <div class="tagContainer"></div>
+                  <div class="HierachyButtons"> 
+                    <div class="simpleHierachyButtons"> 
+                      <button disabled data-action="simpleGeneraliseObject" data-side="reverse" data-tooltipButton="Lists all viable direct generalisations of current object for reverse">
+                        <i class="fa-solid fa-angle-up"></i>
+                      </button>
+                      <button disabled data-action="simpleSpecialiseObject" data-side="reverse" data-tooltipButton="Lists all viable direct specialisation of current object for reverse">
+                        <i class="fa-solid fa-angle-down"></i>
+                      </button>
+                    </div>
+                    <div class="absoluteHierachyButtons"> 
+                      <button disabled data-action="absoluteGeneraliseObject" data-side="reverse" data-tooltipButton="Lists all viable absolute generalisations of current object for reverse">
+                        <i class="fa-solid fa-arrows-up-to-line"></i>
+                      </button>
+                      <button disabled data-action="absoluteSpecialiseObject" data-side="reverse" data-tooltipButton="Lists all viable absolute specialisation of current object for reverse">
+                        <i class="fa-solid fa-arrows-down-to-line"></i>
+                      </button>
+                    </div>
+                    <div class="extraHierachyButtons"> 
+                      <button disabled data-action="similarObject" data-side="reverse" data-tooltipButton="Lists all viable hierarchical siblings of current object for reverse">
+                        <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                      </button>
+                      <button data-action="listAllObj" data-side="reverse" data-tooltipButton="Lists all viable objects for reverse of current coin description">
+                        <i class="fa-solid fa-list" style="font-size: 1.1em;"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="rec">
+                    <ul></ul>
+                  </div>
+                </div>
+                <div class = "hierarchySearch" id="hierarchySearch-reverse-object">
+                  <input
+                    type="text"
+                    class="textbox"
+                    name="q"
+                    placeholder="Object:"
+                    autocomplete="off"
+                    data-role="coin-description-object"
+                    data-side="reverse"
+                    data-searchtype="hierarchy"
+                  />
+                  <span class="material-symbols-outlined totext"> search </span>
+                  <div class=" tagContainer "></div>
+                  <div class="otherHierachyButtons"> 
+                    <button data-action="backToStandardSearch" data-side="reverse" data-role="coin-description-object">
+                      <i class="fa-solid fa-rotate-left" style="font-size: 1.6em;"></i>
+                    </button>
+                  </div>
+                  <div class="rec">
+                    <ul></ul>
+                  </div>
+                </div>
+                <div id="keywords">
+                  <input
+                    type="text"
+                    class="textbox"
+                    placeholder="Keywords"
+                    data-role="coin-keyword"
+                    maxlength="16"
+                  />
+                  <span class="material-symbols-outlined totext"> label </span>
+                  <div class="keywordContainer"></div>
+                  <div class="addKeywordButtons"> 
+                    <button data-action="addKeyword" data-tooltipButton="Includes keyword that needs to be in reverse coin description">
+                      <i class="fa-solid fa-plus"></i>
+                    </button>
+                    <button data-action="negateKeyword" data-tooltipButton="Adds keyword that is not allowed to be in reverse of coin description">
+                      <i class="fa-solid fa-minus"></i>
+                    </button>
+                  </div>  
+                  <div class="clearKeywordButton"> 
+                    <button data-action="clearKeyword">
+                      <i class="fa-solid fa-trash" style="font-size: 1.6em;"></i>
+                    </button>
+                  </div>  
+                </div>
+              </div>
+              <div id="searchActions">
+                <button data-action="clearInputCoin" class="clearCoin">
+                  Clear input
+                </button>
+                <button data-action="addCoin" class="addcoin">
+                  Add coin to query &#8594;
+                </button>
+              </div>
+            </div>
+            <div id="queryBox">
+              <div id="headline">
+                <span
+                  >Queried Items
+                  <span
+                    class="material-symbols-outlined"
+                    data-tooltip="Here you can see the coins you have added to your query. You can edit them, remove them or search for them in the database"
+                    >info</span
+                  >
+                </span>
+              </div>
+              <div id="coincatalogue">
+                <div class="coin-table">
+                  <div class="coin-thead">
+                    <div class="coin-tr">
+                      <span>ID</span>
+                      <span>Front</span>
+                      <span>Back</span>
+                      <span>Action</span>
+                    </div>
+                  </div>
+                  <div class="coin-tbody"></div>
+                </div>
+              </div>
+              <div id="searchActions">
+                <button data-action="clearAllQueriedCoins" class="clearcoins">
+                  Clear All
+                </button>
+                <button data-action="editRelation" class="advancededit">
+                  SPARQL / Relations Editor
+                </button>
+                <button data-action="searchCoin" class="searchcoin" disabled id="type-search" name="search-type" value="TypeSeriesItem">
+                  Type search
+                </button>
+                <button data-action="searchCoin" class="searchcoin" id="coin-search" name="search-type" value="NumismaticObject" disabled>
+                  Coin search
+                </button>
+              </div>
+            </div>
+            <div id="resultBox">
+              <div id="returnToQuery">
+                <span>Back to search &#8593;</span>
+              </div>
+              <div id="headline">
+                <span
+                  >Search results (<span id="numSearchResults">0</span>
+                  results):</span
+                >
+                <div id="resultActions">
+                  <div class="sort-container-sortby">
+                    <label for="sortSelect">Sort By:</label>
+                    <select id="sortSelect" class="sort-dropdown">
+                      <option value="weight">Weight</option>
+                      <option value="maxDiameter">Max Diameter</option>
+                      <option value="location" selected>Region</option>
+                    </select>
+                  </div>
+                  <div class="sort-container-direction">
+                    <label for="sortDirection">Sort Direction:</label>
+                    <select id="sortDirection" class="sort-dropdown">
+                      <option value="ascending" selected>
+                        Ascending &#8593;
+                      </option>
+                      <option value="descending">Descending &#8595;</option>
+                    </select>
+                  </div>
+                  <div class="group-container">
+                    <label for="groupSelect">Group By:</label>
+                    <select id="groupSelect" class="group-dropdown">
+                      <option value="category">Type</option>
+                      <option value="weight">Weight</option>
+                      <option value="maxDiameter">Max Diameter</option>
+                      <option value="location" selected>Region</option>
+                    </select>
+                  </div>
+                  <button
+                    data-action="downloadResults"
+                    class="download-results"
+                  >
+                    CSV Download
+                    <span class="material-symbols-outlined"> download </span>
+                  </button>
+                </div>
+              </div>
+              <div id="resultContainer">
+                <div id="loadingSymbol" class="hidden">
+                  <span class="material-symbols-outlined">
+                    progress_activity
+                  </span>
+                </div>
+              </div>
+              <div id="paginationControls">
+                <button id="prevPage">Previous</button>
+                <span id="pageInfo"></span>
+                <button id="nextPage">Next</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
