@@ -65,7 +65,7 @@ Installieren Sie die erforderlichen Pakete über pip:
 <br />
 `pip install -r requirements.txt`
 
-Sie können nun die Eingabeaufforderung / Kommandozentralen schliessen.
+Sie können nun die Eingabeaufforderung / Kommandozentrale schliessen.
 
 ### Schritt 5: Fuseki Datenbank anbinden
 
@@ -116,7 +116,7 @@ Starten Sie nun Fuseki mit dem Befehl:
 Öffnen Sie eine neue Eingabeaufforderung / Kommandozentrale und navigieren Sie zum Projekt `Bachelorarbeit_NL_SN`:<br /> 
 Beispiel: 
 <br /> 
-`cd C:/Beispielordner/Bachelorarbeit_NL_SN`
+`cd C:/Bachelorarbeit_NL_SN`
 
 Aktivieren Sie die virtuelle Umgebung:
 
