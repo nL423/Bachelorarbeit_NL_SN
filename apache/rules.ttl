@@ -1,0 +1,26 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+# Definiert rdfs:subClassOf als eine transitive Eigenschaft
+# Bespiel: Wenn A ein Teil von B ist und B ein Teil von C ist dann folgt: A ist auch ein Teil von C
+(?subClass rdfs:subClassOf ?class), (?class rdfs:subClassOf ?superClass) -> (?subClass rdfs:subClassOf ?superClass) .
+
+# Definiert rdf:type als eine transitive Eigenschaft in abhänigkeit von rdfs:subClassOf 
+# Bespiel: Wenn A ein Element von B ist und B ein Teil von C ist dann folgt: A ist auch ein Element von C
+(?object rdf:type ?class), (?class rdfs:subClassOf ?superClass) -> (?object rdf:type ?superClass) .
+
+# Definiert das jedes Element das eine Unterklasse hat eine Klasse ist
+(?subClass rdfs:subClassOf ?class) -> (?class rdf:type rdfs:Class) .
+
+# Definiert das jedes Element das eine Oberklasse hat eine Klasse ist
+(?class rdfs:subClassOf ?superClass) -> (?class rdf:type rdfs:Class) .
+
+# Definiert das jedes Klasse ohne Name(Label) sich selbst als Name hat
+# (Name wird in entsprechenden Sparql Querries angepasst)
+(?class rdf:type rdfs:Class), noValue(?class skos:prefLabel ?label), strConcat(?class, ?class_uri) -> (?class skos:prefLabel ?class_uri) .
+
+
+
+
+

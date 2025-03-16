@@ -26,17 +26,17 @@ Folgen Sie diesen Schritten, um das Projekt lokal auf Ihrem Computer einzurichte
 
 ### Schritt 1: Repository klonen
 
+Öffnen sie die Kommandozentrale beziehungsweise die Eingabeaufforderung. <br /> 
 Klonen Sie das Git-Repository auf Ihren lokalen Computer:
 <br />
 `git clone https://github.com/nL423/Bachelorarbeit_NL_SN.git`
 
 ### Schritt 2: Projektverzeichnis
 
-Öffnen sie die Kommandozentrale beziehungsweise die Eingabeaufforderung. <br /> 
-Wechseln Sie in den Ordner indem das Pojektverzeichnis liegt. <br /> 
-Wechseln Sie in das Projektverzeichnis:
+Wechseln Sie in der Kommandozentrale in das Projektverzeichnis.<br />
+Beispiel: 
 <br />
-`cd Bachelorarbeit_NL_SN`
+`cd C:/Bachelorarbeit_NL_SN`
 
 ### Schritt 3: Virtuelle Umgebung
 
@@ -69,7 +69,7 @@ Installieren Sie die erforderlichen Pakete über pip:
 
 #### Möglichkeit A: Unter der Verwendung von Apache-Jena-Fuseki-5.0.0
 
-Legen Sie die sich im Projekt befindende config.ttl und rules.ttl in dem `run` Ordner ihrer installierten Apache-Jena-Fuseki Version ab
+Legen Sie die sich im `apache` Ordner des Projekts befindende `config.ttl` und `rules.ttl` in den `run` Ordner ihrer installierten Apache-Jena-Fuseki Version ab
 
 Öffnen Sie eine Eingabeaufforderung / Kommandozentrale und navigieren Sie zu der Apache-Jena-Fuseki Version 5.0.0 <br />
 Beispiel: 
